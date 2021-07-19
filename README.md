@@ -1,8 +1,9 @@
 # TravelSite
 
-##作成手順
+## Build Setup
 
-###vendorインストール
+```bash
+#vendorのインストール
 $composer install 
 
 ###.envの作成
@@ -10,8 +11,6 @@ cp .env.example .env
 
 ###アプリケーションキーの初期化
 php artisan key:generate
-
-##コマンド
 
 ###起動
 ./vendor/bin/sail up -d
@@ -21,4 +20,6 @@ php artisan key:generate
 
 ###Mysqlへ接続 
 ./vendor/bin/sail mysql 
+
+```
 
