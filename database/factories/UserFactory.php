@@ -23,6 +23,8 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+        $postcode = $this->faker->postcode();
+    
         return [
             'user_id' => $this->faker->unique()->userName(),
             'password' => Hash::make('p'),
@@ -32,7 +34,7 @@ class UserFactory extends Factory
             'first_name_kana' => $this->faker->firstKanaName(),
             'gender' => $this->faker->numberBetween(1, 3),
             'birthday' => $this->faker->dateTimeBetween('-80year', '-15year')->format('Ymd'),
-            'postal_code' => $this->faker->postcode(),
+            'postal_code' => substr($postcode, 0, 3) . '-' . substr($postcode, 3, 4),
             'prefecture_cd' => $this->faker->numberBetween(1, 47),
             'city_name' => $this->faker->city(),
             'town_name' => $this->faker->streetName(),

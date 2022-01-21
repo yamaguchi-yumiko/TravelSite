@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('first_name_kana', 64)->nullable(false)->comment('名カナ');
             $table->integer('gender')->length(1)->nullable(false)->comment('性別');
             $table->char('birthday', 8)->nullable(false)->comment('生年月日');
-            $table->char('postal_code', 7)->nullable(false)->comment('郵便番号');
+            $table->char('postal_code', 8)->nullable(false)->comment('郵便番号');
             $table->string('prefecture_cd', 2)->nullable(false)->comment('都道府県CD');
             $table->string('city_name', 64)->nullable(false)->comment('市区町村');
             $table->string('town_name', 64)->nullable(false)->comment('町名番地');
