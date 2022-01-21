@@ -40,6 +40,8 @@ class UserFactory extends Factory
             'tel' => $this->faker->phoneNumber(),
             'emergency_contact' => $this->faker->phoneNumber(),
             'email' => $this->faker->unique()->safeEmail(),
+            'email_verify_token' => hash_hmac('sha256', $this->faker->numberBetween(1, 100000) . now(), env('APP_KEY')),
+            'email_verified' => true,
             'del_flg' => false,
             'ins_date' => $this->faker->dateTime(),
             'ins_prg' => 'migration',
