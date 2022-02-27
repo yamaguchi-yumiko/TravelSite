@@ -9,7 +9,8 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory;
+    use Notifiable;
 
     public $timestamps = false;
 
@@ -19,9 +20,28 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
-        'email',
+        'user_id',
         'password',
+        'last_name',
+        'first_name',
+        'last_name_kana',
+        'first_name_kana',
+        'gender',
+        'birthday',
+        'postal_code',
+        'prefecture_cd',
+        'city_name',
+        'town_name',
+        'other_address',
+        'tel',
+        'emergency_contact',
+        'email',
+        'email_verify_token',
+        'email_verified',
+        'ins_date',
+        'ins_prg',
+        'upd_date',
+        'upd_prg',
     ];
 
     /**
@@ -31,7 +51,7 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password',
-        'remember_token',
+        // 'remember_token',
     ];
 
     /**
@@ -40,6 +60,8 @@ class User extends Authenticatable
      * @var array
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
+        // 'email_verified_at' => 'datetime',
+        'ins_date' => 'datetime',
+        'upd_date' => 'datetime',
     ];
 }
