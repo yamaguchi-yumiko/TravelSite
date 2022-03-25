@@ -1,0 +1,6151 @@
+@charset "UTF-8";
+/* v1.0 2017/10/18 */
+/* domhotel-pc.css */
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column--people .domhotel-select-column__input:before, .dom-spinbox__label--room:before, .dom-spinbox__label--men:before, .dom-spinbox__label--women:before, .domhotel-room-child__trigger:before, .domhotel-room-child__trigger:after, .domhotel-room-child__trigger span:before {
+  display: inline-block;
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel .domhotel-panel-contents .domhotel-panel-close-btn:before, .domhotel-reserve-section .domhotel-condition-select .domhotel-select-column--checkin .domhotel-select-column__input:before, .mfp-close:before {
+  display: inline-block;
+  font-family: 'kkrs-dp' !important;
+  text-decoration: none;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* search
+---------------------------------------------------------- */
+/* search 基本検索 */
+.domhotel-search {
+  position: relative;
+}
+.domhotel-search .dom-search__column {
+  margin-bottom: 10px;
+}
+.domhotel-search__dep-area {
+  width: 14rem;
+  float: left;
+  margin-right: 15px;
+}
+.domhotel-search__place {
+  width: 36rem;
+  float: left;
+  margin-right: 15px;
+}
+.domhotel-search__date {
+  width: 14rem;
+  float: left;
+  position: static;
+}
+.domhotel-search__date .dom-search__panel--calendar {
+  top: 40px;
+}
+.domhotel-search__night {
+  width: 8rem;
+  float: left;
+  margin-right: 15px;
+  margin-left: -1px;
+}
+.domhotel-search__night .dom-search__input--night:before {
+  display: none;
+}
+.domhotel-search__night .dom-search__input--night input {
+  padding-left: 10px;
+}
+.domhotel-search__people {
+  width: 24rem;
+  float: left;
+  margin-right: 15px;
+}
+.domhotel-search__people .dom-search__panel--people {
+  width: 38rem;
+  left: auto;
+  right: 0;
+}
+.domhotel-search__people .dom-spinbox__label {
+  width: calc(100%);
+}
+.domhotel-search__people .dom-spinbox--room {
+  border-bottom: 1px solid #d7d7d7;
+  margin-bottom: 20px;
+}
+.domhotel-search__people .domhotel-people-warning {
+  font-size: 1.1rem;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  white-space: nowrap;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  padding: .5rem 1rem;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
+  z-index: 1;
+}
+.domhotel-search__people:hover .domhotel-people-warning {
+  opacity: 1;
+  visibility: visible;
+}
+.domhotel-search__room {
+  width: 10rem;
+  float: left;
+  margin-right: 15px;
+}
+.domhotel-search__btn-submit {
+  width: 14rem;
+  z-index: 2;
+}
+.domhotel-search__option {
+  clear: both;
+  padding-top: 5px;
+}
+.domhotel-search__option .dom-search-option__selected {
+  padding-right: 17rem;
+  bottom: 0;
+}
+
+@media screen and (max-width: 1110px) {
+  .domhotel-search__btn-submit {
+    margin-bottom: 10px;
+  }
+}
+/* plan プラン検索 */
+.domhotel-search-plan .domhotel-search__date .dom-search__panel--calendar {
+  left: 0;
+  position: absolute;
+}
+
+/* location 地図から探す */
+.domhotel-search-location {
+  height: 100vh;
+  margin-bottom: 20px;
+}
+.domhotel-search-location__in {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  border: 2px solid #195178;
+  overflow: hidden;
+  height: 100%;
+  background-color: #fff;
+}
+.domhotel-search-location.is-fixed {
+  margin-top: 100%;
+}
+.domhotel-search-location.is-fixed .domhotel-search-location__in {
+  width: 1120px;
+  position: fixed;
+  top: 0;
+  left: auto;
+  z-index: 10;
+}
+.domhotel-search-location.is-released {
+  margin-top: 100%;
+}
+.domhotel-search-location__column-01 {
+  min-width: 27.5rem;
+  width: 27.5rem;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 100;
+}
+.domhotel-search-location__column-02 {
+  width: 100%;
+  position: relative;
+}
+.domhotel-search-location__map {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.domhotel-search-location .dom-search-conditions {
+  height: 100%;
+  overflow: auto;
+}
+.domhotel-search-location__hotel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 240px;
+  padding: 6px;
+  overflow: auto;
+  max-height: 100%;
+}
+.domhotel-search-location__hotel-item {
+  margin-bottom: 6px;
+}
+.domhotel-search-location__btn-refresh {
+  margin: 5px 10px 15px;
+}
+.domhotel-search-location__pager {
+  margin: 15px 0 6px;
+}
+
+.domhotel-section-search__txt-01 {
+  margin: 10px 0 -10px;
+}
+
+.domhotel-section-search #panel01 {
+  margin-top: 25px;
+}
+
+/* result
+---------------------------------------------------------- */
+.domhotel-result-header .dom-result-header__display-number {
+  bottom: auto;
+  top: 0;
+}
+.domhotel-result-header .dom-sort__item {
+  padding: 0 .5em;
+}
+
+/* 地図の下に固定 表示件数 */
+.domhotel-result-header.is-fixed {
+  position: static;
+}
+.domhotel-result-header.is-fixed .dom-result-header__display-number {
+  position: fixed;
+  top: auto;
+  right: auto;
+  bottom: 11px !important;
+  z-index: 12;
+  margin-left: 15px;
+}
+.domhotel-result-header.is-fixed .dom-form-pulldown__panel {
+  top: auto;
+  bottom: 100%;
+}
+
+/* 地図の下に固定 ページャー */
+.domhotel-result-pager.is-fixed {
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 11;
+  width: 1120px;
+  padding-right: 5px;
+}
+
+/* 検索結果の客室ごとヘッダー */
+.domhotel-result-room__header {
+  padding: 10px;
+  background-color: #d0e8ff;
+  margin-bottom: 20px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+}
+.domhotel-result-room__header:after {
+  content: "";
+  border-style: solid;
+  border-width: 15px 20px 0 20px;
+  border-color: #d0e8ff transparent transparent transparent;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  margin-left: -15px;
+}
+.domhotel-result-room__column-01 {
+  padding: 10px;
+}
+.domhotel-result-room__column-02 {
+  width: 15rem;
+  min-width: 15rem;
+}
+.domhotel-result-room__name {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.domhotel-result-room__txt-01 {
+  font-size: 1.1rem;
+  color: #777;
+}
+
+/* 20200508:絞り込み項目レイアウト改修 */
+.domhotel-result-header {
+  z-index: 3;
+}
+.domhotel-result-header .dom-result-header__count {
+  margin-bottom: .5em;
+}
+.domhotel-result-header .domhotel-selected-conditions__list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+  margin-bottom: .8rem;
+}
+.domhotel-result-header .domhotel-selected-conditions__item {
+  margin: 0 .8rem .8rem 0;
+  padding: .5rem 2.4rem .5rem .8rem;
+  height: 2.4rem;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  border: 1px solid #999;
+  color: #666;
+  position: relative;
+}
+.domhotel-result-header .domhotel-selected-conditions__item:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-result-header .domhotel-selected-conditions__item:hover {
+  opacity: .8;
+}
+.domhotel-result-header .domhotel-selected-conditions__item:before {
+  font-size: 1.1rem;
+  color: #3c92ba;
+  position: absolute;
+  top: 50%;
+  right: 0.6rem;
+  margin-top: -.5em;
+}
+.domhotel-result-header .domhotel-selected-conditions__item .domhotel-ico-star {
+  position: relative;
+  display: inline-block;
+  margin-right: .5em;
+}
+.domhotel-result-header .domhotel-selected-conditions__item .domhotel-ico-star:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-result-header .domhotel-selected-conditions__item .domhotel-ico-star:before {
+  color: #fcaa05;
+}
+.domhotel-result-header .domhotel-selected-conditions__btn-clear {
+  margin: 0 .8rem .8rem 0;
+  padding: .5rem .8rem;
+  height: 2.4rem;
+  border-radius: 2px;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #2d6e8c;
+  font-weight: bold;
+  color: #2d6e8c;
+}
+.domhotel-result-header .domhotel-selected-conditions__btn-clear:hover {
+  opacity: .8;
+}
+.domhotel-result-header .domhotel-selected-conditions__block {
+  margin-top: .8rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.domhotel-result-header .domhotel-selected-conditions__block > dt {
+  white-space: nowrap;
+  line-height: 2.4rem;
+}
+.domhotel-result-header .domhotel-selected-conditions__block > dt:after {
+  content: "：";
+}
+.domhotel-result-header .domhotel-selected-conditions__block > dd {
+  flex: 1;
+  padding-left: .8rem;
+}
+.domhotel-result-header .dom-sort__item {
+  background-color: #fff;
+  border: 1px solid #999;
+  border-radius: 4px;
+  margin-right: .5em;
+  padding: .5rem 1rem;
+  line-height: 1;
+  transition: all .2s;
+}
+.domhotel-result-header .dom-sort__item:hover, .domhotel-result-header .dom-sort__item--active {
+  border-color: #666;
+  background-color: #666;
+  color: #fff;
+}
+.domhotel-result-header .dom-display-number {
+  position: static;
+  align-self: flex-start;
+}
+.domhotel-result-header .dom-display-number .dom-form-pulldown__input input {
+  height: 35px;
+}
+
+/* hotel
+---------------------------------------------------------- */
+/* hotel - list 検索結果 */
+.domhotel-hotel-list {
+  position: relative;
+  margin: 20px 0 50px;
+}
+.domhotel-hotel-list__item {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.domhotel-hotel-list__item-in {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.domhotel-hotel-list__column-01 {
+  width: 67.51%;
+  margin-bottom: 15px;
+}
+.domhotel-hotel-list__column-01 .dom-hotel-details__hotel-ico {
+  float: left;
+}
+.domhotel-hotel-list__column-02 {
+  width: 29.29%;
+  margin-bottom: 15px;
+}
+.domhotel-hotel-list__column-03 {
+  width: 20rem;
+}
+.domhotel-hotel-list__column-04 {
+  width: 39.49%;
+}
+.domhotel-hotel-list__column-05 {
+  width: 29.29%;
+  position: relative;
+  padding-bottom: 75px;
+}
+.domhotel-hotel-list .domhotel-total-label {
+  margin-bottom: .4rem;
+  color: #777;
+}
+.domhotel-hotel-list .domhotel-total-label .domhotel-people {
+  display: inline-block;
+}
+.domhotel-hotel-list .domhotel-total-label .domhotel-tax {
+  display: inline-block;
+  margin-left: .2em;
+}
+.domhotel-hotel-list .domhotel-total-label .domhotel-tooltip-link {
+  display: inline-block;
+  font-size: 1.2rem;
+  position: relative;
+  padding-right: 1.2em;
+  cursor: pointer;
+  position: relative;
+}
+.domhotel-hotel-list .domhotel-total-label .domhotel-tooltip-link:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-hotel-list .domhotel-total-label .domhotel-tooltip-link:before {
+  color: #999;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -.5em;
+}
+.domhotel-hotel-list .domhotel-total-label .domhotel-tooltip-link:hover .domhotel-tooltip-content {
+  opacity: 1;
+  visibility: visible;
+}
+.domhotel-hotel-list .domhotel-total-label .domhotel-tooltip-content {
+  font-size: 1.1rem;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  white-space: nowrap;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+  padding: .5rem 1rem;
+  margin-bottom: .5rem;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
+  z-index: 1;
+}
+.domhotel-hotel-list .domhotel-total-price {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.domhotel-hotel-list .domhotel-total-price .domhotel-from,
+.domhotel-hotel-list .domhotel-total-price .domhotel-to {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1;
+}
+.domhotel-hotel-list .domhotel-total-price .domhotel-from em,
+.domhotel-hotel-list .domhotel-total-price .domhotel-to em {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.domhotel-hotel-list .domhotel-per-price {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: .5rem;
+}
+.domhotel-hotel-list .domhotel-per-price .domhotel-adult {
+  font-size: 1.2rem;
+  color: #777;
+}
+.domhotel-hotel-list .domhotel-per-price .domhotel-range {
+  margin-left: .5em;
+}
+
+/* hotel - details 施設詳細 */
+.domhotel-hotel-details__in {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.domhotel-hotel-details__column-01 {
+  min-width: 45rem;
+  width: 45rem;
+  padding-bottom: 2rem;
+}
+.domhotel-hotel-details__column-02 {
+  width: calc(100% - 45rem);
+  padding-left: 30px;
+}
+.domhotel-hotel-details__column-03 {
+  width: 50%;
+  align-self: center;
+}
+.domhotel-hotel-details__column-03 .domhotel-hotel-details__dp-list > li {
+  margin-bottom: 8px;
+}
+.domhotel-hotel-details__column-04 {
+  width: 50%;
+  padding-left: 20px;
+  position: relative;
+}
+.domhotel-hotel-details__column-04 .dom-hotel-price {
+  margin-bottom: 0;
+}
+.domhotel-hotel-details__column-row {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  position: relative;
+}
+.domhotel-hotel-details__action-list {
+  white-space: nowrap;
+  font-size: 0;
+  margin-bottom: 20px;
+}
+.domhotel-hotel-details__action-list > li {
+  display: inline-block;
+  min-width: 10rem;
+  padding-left: 10px;
+}
+.domhotel-hotel-details__area {
+  margin-bottom: 20px;
+}
+.domhotel-hotel-details__area .domhotel-area-txt:before {
+  content: "［";
+}
+.domhotel-hotel-details__area .domhotel-area-txt:after {
+  content: "］";
+}
+.domhotel-hotel-details__icons {
+  width: 60%;
+}
+.domhotel-hotel-details__rating {
+  margin-left: auto;
+}
+.domhotel-hotel-details__lead {
+  margin: 1em 0;
+}
+.domhotel-hotel-details__dp-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.domhotel-hotel-details__dp-list > li {
+  margin-right: 8px;
+}
+.domhotel-hotel-details__dp-list > li:last-child {
+  margin-right: 0;
+}
+.domhotel-hotel-details .dom-hotel-details__ico-list-01 > li {
+  margin-right: 10px;
+}
+.domhotel-hotel-details .dom-hotel-details__btn {
+  width: 27rem;
+}
+.domhotel-hotel-details .domhotel-btn-map {
+  display: inline-block;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #125687;
+  position: relative;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 25px;
+  padding: 0 .8em 0 .5em;
+  margin-left: .5em;
+}
+.domhotel-hotel-details .domhotel-btn-map:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-hotel-details .domhotel-btn-map:hover {
+  opacity: .8;
+}
+.domhotel-hotel-details .domhotel-btn-map:before {
+  margin-right: .2em;
+}
+.domhotel-hotel-details .domhotel-hotel-ico-list {
+  margin-bottom: auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-hotel-details .domhotel-hotel-ico-list > li {
+  margin: 0 2.5rem .5rem 0;
+}
+.domhotel-hotel-details .domhotel-hotel-ico-list > li img {
+  width: 2rem;
+  margin-right: .3rem;
+}
+.domhotel-hotel-details .domhotel-recommend-ico-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-hotel-details .domhotel-recommend-ico-list > li {
+  margin: .5rem 1rem 0 0;
+}
+.domhotel-hotel-details .dom-hotel-details__access {
+  margin: 1em 0 2em;
+}
+.domhotel-hotel-details .dom-hotel-details__access-label {
+  display: inline;
+}
+.domhotel-hotel-details .dom-hotel-details__access-label:after {
+  content: "：";
+}
+.domhotel-hotel-details .dom-hotel-details__access-txt {
+  display: inline;
+}
+.domhotel-hotel-details .domhotel-link-dp-air,
+.domhotel-hotel-details .domhotel-link-dp-jr {
+  display: block;
+  color: #125687;
+  border: 1px solid #125687;
+  border-radius: 4px;
+  padding: .7rem 1rem .7rem 3.5rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  white-space: nowrap;
+  position: relative;
+}
+.domhotel-hotel-details .domhotel-link-dp-air em,
+.domhotel-hotel-details .domhotel-link-dp-jr em {
+  font-weight: bold;
+  font-size: 1.3rem;
+  display: block;
+}
+.domhotel-hotel-details .domhotel-link-dp-air:before,
+.domhotel-hotel-details .domhotel-link-dp-jr:before {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  margin-top: -.5em;
+  font-size: 1.8rem;
+}
+.domhotel-hotel-details .domhotel-link-dp-air {
+  position: relative;
+}
+.domhotel-hotel-details .domhotel-link-dp-air:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-hotel-details .domhotel-link-dp-jr {
+  position: relative;
+}
+.domhotel-hotel-details .domhotel-link-dp-jr:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-hotel-details .domhotel-total-label {
+  margin-bottom: .4rem;
+  color: #777;
+}
+.domhotel-hotel-details .domhotel-total-label .domhotel-people {
+  display: inline-block;
+}
+.domhotel-hotel-details .domhotel-total-label .domhotel-tax {
+  display: inline-block;
+  margin-left: .2em;
+}
+.domhotel-hotel-details .domhotel-total-label .domhotel-tooltip-link {
+  display: inline-block;
+  font-size: 1.2rem;
+  position: relative;
+  padding-right: 1.2em;
+  cursor: pointer;
+  position: relative;
+}
+.domhotel-hotel-details .domhotel-total-label .domhotel-tooltip-link:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-hotel-details .domhotel-total-label .domhotel-tooltip-link:before {
+  color: #999;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -.5em;
+}
+.domhotel-hotel-details .domhotel-total-label .domhotel-tooltip-link:hover .domhotel-tooltip-content {
+  opacity: 1;
+  visibility: visible;
+}
+.domhotel-hotel-details .domhotel-total-label .domhotel-tooltip-content {
+  font-size: 1.1rem;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  white-space: nowrap;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+  padding: .5rem 1rem;
+  margin-bottom: .5rem;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
+  z-index: 1;
+}
+.domhotel-hotel-details .domhotel-total-price {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.domhotel-hotel-details .domhotel-total-price .domhotel-from,
+.domhotel-hotel-details .domhotel-total-price .domhotel-to {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1;
+}
+.domhotel-hotel-details .domhotel-total-price .domhotel-from em,
+.domhotel-hotel-details .domhotel-total-price .domhotel-to em {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.domhotel-hotel-details .domhotel-per-price {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: .5rem;
+}
+.domhotel-hotel-details .domhotel-per-price .domhotel-adult {
+  font-size: 1.2rem;
+  color: #777;
+}
+.domhotel-hotel-details .domhotel-per-price .domhotel-range {
+  margin-left: .5em;
+}
+
+.domhotel-hotel-ttl {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin-bottom: 2rem;
+}
+.domhotel-hotel-ttl__ico {
+  padding-right: 1.5rem;
+}
+.domhotel-hotel-ttl__ico img {
+  height: 2.7rem;
+}
+.domhotel-hotel-ttl__name {
+  flex: 1;
+}
+.domhotel-hotel-ttl__name .dom-heading-04 {
+  margin-bottom: 0;
+}
+.domhotel-hotel-ttl .domhotel-tooltip-link {
+  cursor: pointer;
+  position: relative;
+}
+.domhotel-hotel-ttl .domhotel-tooltip-link:hover .domhotel-tooltip-premium,
+.domhotel-hotel-ttl .domhotel-tooltip-link:hover .domhotel-tooltip-premiumplus {
+  opacity: 1;
+  visibility: visible;
+}
+.domhotel-hotel-ttl .domhotel-tooltip-premium {
+  font-size: 1.2rem;
+  position: absolute;
+  width: 23rem;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  margin-top: 2.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
+  z-index: 1;
+}
+.domhotel-hotel-ttl .domhotel-tooltip-premium:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: .6rem;
+  background: -webkit-linear-gradient(left, #431252 0%, #fff 100%);
+  background: linear-gradient(to right, #431252 0%, #fff 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.domhotel-hotel-ttl .domhotel-tooltip-premium--plus:before {
+  background: -webkit-linear-gradient(left, #bf1923 0%, #fff 100%);
+  background: linear-gradient(to right, #bf1923 0%, #fff 100%);
+}
+.domhotel-hotel-ttl .domhotel-tooltip-premium__ttl {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: .5em;
+  display: flex;
+  align-items: center;
+}
+.domhotel-hotel-ttl .domhotel-tooltip-premium__ttl img {
+  width: 2.4rem;
+  margin-right: .5rem;
+}
+
+/* hotel - menu メニュー（タブ型） */
+.domhotel-hotel-menu {
+  margin: 0;
+  padding: 0 0 40px 0;
+  background-color: #f7f7f7;
+  z-index: 999;
+  transition: all .2s;
+}
+.domhotel-hotel-menu .dom-tab__list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.domhotel-hotel-menu .dom-tab__list > li a {
+  transition: color .2s;
+}
+.domhotel-hotel-menu .dom-tab__list > li a:hover {
+  color: #323743;
+  font-weight: bold;
+}
+.domhotel-hotel-menu .dom-tab__item.is-active:after {
+  background-color: #cc0d21;
+}
+.domhotel-hotel-menu.is-fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 10px 0 0;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.domhotel-hotel-menu.is-fixed .dom-tab__list {
+  min-width: 970px;
+  max-width: 1120px;
+  margin: auto;
+  position: relative;
+}
+.domhotel-hotel-menu.is-fixed + * {
+  margin-top: 102.5px;
+}
+.domhotel-hotel-menu .domhotel-count {
+  font-size: 1.4rem;
+}
+.domhotel-hotel-menu .domhotel-count:before {
+  content: "（";
+}
+.domhotel-hotel-menu .domhotel-count:after {
+  content: "）";
+}
+
+.domhotel-hotel-menu-landing {
+  margin-top: -73px;
+  padding-top: 73px;
+}
+
+/* plan
+---------------------------------------------------------- */
+/* plan - list 検索結果 */
+.domhotel-plan-list {
+  margin: 20px 0 50px;
+}
+.domhotel-plan-list__item {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+.domhotel-plan-list__item-in {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.domhotel-plan-list__column-01 {
+  margin-bottom: 20px;
+}
+.domhotel-plan-list__column-01 .dom-plan-details__plan-ico {
+  width: auto;
+  margin-bottom: 1rem;
+}
+.domhotel-plan-list__column-01 .dom-plan-details__plan-ico img {
+  width: 92px;
+  /* width: 120px; から変更 */
+}
+.domhotel-plan-list__column-02 {
+  width: 67.51%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.domhotel-plan-list__column-03 {
+  width: 29.29%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.domhotel-plan-list__column-04 {
+  text-align: center;
+}
+.domhotel-plan-list__column-image {
+  width: 22rem;
+}
+.domhotel-plan-list__column-info {
+  width: calc(100% - 22rem);
+  min-width: calc(100% - 22rem);
+}
+.domhotel-plan-list__column-note {
+  clear: both;
+  width: 100%;
+  padding-top: 15px;
+  font-size: 1.2rem;
+}
+.domhotel-plan-list__column-note * {
+  color: #95999e;
+}
+.domhotel-plan-list .dom-accordion-content-02 {
+  height: 110px;
+}
+.domhotel-plan-list .dom-accordion-content-02.is-open {
+  overflow: visible;
+  height: auto;
+}
+.domhotel-plan-list .domhotel-total-label {
+  margin-bottom: .4rem;
+  color: #777;
+}
+.domhotel-plan-list .domhotel-total-label .domhotel-people {
+  display: inline-block;
+}
+.domhotel-plan-list .domhotel-total-label .domhotel-tax {
+  display: inline-block;
+  margin-left: .2em;
+}
+.domhotel-plan-list .domhotel-total-label .domhotel-tooltip-link {
+  display: inline-block;
+  font-size: 1.2rem;
+  position: relative;
+  padding-right: 1.2em;
+  cursor: pointer;
+  position: relative;
+}
+.domhotel-plan-list .domhotel-total-label .domhotel-tooltip-link:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-plan-list .domhotel-total-label .domhotel-tooltip-link:before {
+  color: #999;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -.5em;
+}
+.domhotel-plan-list .domhotel-total-label .domhotel-tooltip-link:hover .domhotel-tooltip-content {
+  opacity: 1;
+  visibility: visible;
+}
+.domhotel-plan-list .domhotel-total-label .domhotel-tooltip-content {
+  font-size: 1.1rem;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  white-space: nowrap;
+  background-color: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
+  padding: .5rem 1rem;
+  margin-bottom: .5rem;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
+  z-index: 1;
+}
+.domhotel-plan-list .domhotel-total-price {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.domhotel-plan-list .domhotel-total-price .domhotel-from,
+.domhotel-plan-list .domhotel-total-price .domhotel-to {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1;
+}
+.domhotel-plan-list .domhotel-total-price .domhotel-from em,
+.domhotel-plan-list .domhotel-total-price .domhotel-to em {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.domhotel-plan-list .domhotel-per-price {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: .5rem;
+}
+.domhotel-plan-list .domhotel-per-price .domhotel-adult {
+  font-size: 1.2rem;
+  color: #777;
+}
+.domhotel-plan-list .domhotel-per-price .domhotel-range {
+  margin-left: .5em;
+}
+.domhotel-plan-list .dom-plan-details__btn {
+  margin-top: auto;
+  position: static;
+}
+.domhotel-plan-list .dom-room-note {
+  color: #323743;
+  font-weight: normal;
+}
+.domhotel-plan-list .dom-room-note * {
+  color: #323743;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+.domhotel-plan-list .domhotel-free-cancellation {
+  text-align: right;
+  margin: .3rem 0 1rem;
+}
+.domhotel-plan-list .domhotel-free-cancellation__in {
+  display: inline-block;
+  background: #ecf9ff;
+  padding: .8rem 1rem .8rem 3rem;
+  font-size: 1.2rem;
+  line-height: 1;
+  position: relative;
+}
+.domhotel-plan-list .domhotel-free-cancellation__in:before {
+  content: "";
+  display: block;
+  background: url(../images/ico-alert.svg) no-repeat center center;
+  background-size: contain;
+  width: 1.8rem;
+  height: 1.8rem;
+  position: absolute;
+  top: 50%;
+  left: .8rem;
+  margin-top: -.9rem;
+}
+
+/* plan - details プラン詳細 */
+.domhotel-plan-details__item-in {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.domhotel-plan-details__column-01 {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+}
+.domhotel-plan-details__column-02 {
+  width: 76%;
+  padding-right: 20px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.domhotel-plan-details__column-03 {
+  width: 24%;
+  position: relative;
+  padding-bottom: 75px;
+}
+.domhotel-plan-details__column-image {
+  width: 30rem;
+  min-width: 30rem;
+}
+.domhotel-plan-details__column-info {
+  width: calc(100% - 30rem);
+  min-width: calc(100% - 30rem);
+}
+.domhotel-plan-details__column-note {
+  width: 100%;
+  padding-top: 15px;
+  font-size: 1.2rem;
+}
+.domhotel-plan-details__figure {
+  width: 28rem;
+}
+.domhotel-plan-details .dom-plan-details__plan-name {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+.domhotel-plan-details .dom-plan-details__room-type {
+  font-size: 1.6rem;
+  margin-bottom: 1.5em;
+}
+.domhotel-plan-details .dom-plan-details__room-type .dom-ico-point-up {
+  margin-left: 1em;
+}
+.domhotel-plan-details .dom__btn-detail-02 > a {
+  border: none;
+  border-radius: 0;
+  line-height: 50px;
+}
+.domhotel-plan-details .dom__btn-detail-02 > a span {
+  padding: 0 28px 0 0;
+}
+.domhotel-plan-details .dom__btn-detail-02 > a span:before {
+  left: auto;
+  right: 0;
+  color: #3498db;
+}
+
+/* plan - image プラン画像 */
+.domhotel-plan-image__main img {
+  max-height: 225px;
+}
+.domhotel-plan-image__caption {
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  padding: 10px 0;
+}
+.domhotel-plan-image.slick-dotted.slick-slider {
+  margin-bottom: 0;
+}
+.domhotel-plan-image .slick-dots {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: static;
+}
+.domhotel-plan-image .slick-dots > li {
+  width: 100px;
+  height: 72px;
+  margin: 0;
+  padding: 2px;
+}
+.domhotel-plan-image .slick-dots > li img {
+  max-height: 72px;
+}
+
+/* plan - info プラン内容 */
+.domhotel-plan-info__in {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.domhotel-plan-info__column-01 {
+  width: 30rem;
+}
+.domhotel-plan-info__column-02 {
+  width: calc(100% - 30rem);
+  padding-left: 30px;
+}
+.domhotel-plan-info__ico {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+.domhotel-plan-info__ico-txt {
+  margin-left: 1em;
+  padding-top: 3px;
+}
+
+/* plan - change プラン内容の変更 */
+.domhotel-plan-change {
+  margin-top: 30px;
+  border: 2px solid #999;
+  display: table;
+  width: 100%;
+}
+.domhotel-plan-change__column-01 {
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 30rem;
+}
+.domhotel-plan-change__column-01:after {
+  content: "";
+  border-style: solid;
+  border-color: transparent transparent transparent #f5f5f5;
+  border-width: 10px 0 10px 10px;
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 11;
+}
+.domhotel-plan-change__column-02 {
+  display: table-cell;
+  vertical-align: middle;
+}
+.domhotel-plan-change__heading {
+  font-size: 1.8rem;
+  line-height: 1;
+  font-weight: normal;
+}
+.domhotel-plan-change__list > li {
+  font-size: 1.5rem;
+  line-height: 1.4;
+  margin: .5em 0;
+}
+.domhotel-plan-change .dom-form-pulldown__input {
+  padding: 10px 0;
+}
+.domhotel-plan-change .dom-form-pulldown__input input {
+  color: #323743;
+  font-weight: bold;
+  border: none;
+  padding: 0 45px 0 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.domhotel-plan-change .dom-form-pulldown__input input:focus {
+  box-shadow: none;
+}
+.domhotel-plan-change .dom-form-pulldown__input:after {
+  font-size: 1.8rem;
+  right: 20px;
+}
+.domhotel-plan-change .dom-form-pulldown__input.is-active input {
+  box-shadow: none;
+}
+.domhotel-plan-change .dom-form-pulldown__panel {
+  border-color: #999;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.2);
+  top: calc(100% + 1px);
+  width: calc(100% + 2px);
+}
+.domhotel-plan-change .dom-form-pulldown .dom-pulldown-list > li {
+  padding: 0;
+}
+.domhotel-plan-change .dom-form-pulldown .dom-pulldown-list > li a {
+  padding: 8px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+/* plan - check btn この施設のプランを見るボタン（ページ下部） */
+.domhotel-plan-check-btn {
+  text-align: right;
+  margin-bottom: 40px;
+}
+.domhotel-plan-check-btn a {
+  display: inline-block;
+  width: 27rem;
+  color: #fff;
+  box-shadow: none;
+}
+.domhotel-plan-check-btn a:after {
+  display: none;
+}
+
+/* plan - select プラン選択条件 修正20200622 */
+.domhotel-plan-select {
+  margin-top: 3rem;
+}
+.domhotel-plan-select__heading {
+  font-size: 1.6rem;
+  margin-bottom: .5em;
+}
+.domhotel-plan-select__ttl {
+  padding-left: 1em;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: bold;
+}
+.domhotel-plan-select__column {
+  text-align: left;
+  margin-bottom: 10px;
+  border: 1px solid #d7d7d7;
+  padding: 10px 15px;
+}
+.domhotel-plan-select__label {
+  font-size: 1.6rem;
+  margin-bottom: .5em;
+}
+.domhotel-plan-select__price {
+  border-top: 1px solid #d7d7d7;
+  margin-top: 8px;
+  padding-top: 8px;
+  text-align: right;
+  line-height: 1.4;
+}
+.domhotel-plan-select__adult-label {
+  font-size: 1.1rem;
+  margin-right: .5em;
+}
+.domhotel-plan-select__adult-price {
+  font-size: 1.4rem;
+}
+.domhotel-plan-select__total-label {
+  font-size: 1.1rem;
+  margin-right: .5em;
+}
+.domhotel-plan-select__total-price {
+  font-size: 1.4rem;
+}
+
+/* room
+---------------------------------------------------------- */
+.domhotel-room__point {
+  margin-bottom: 20px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-room__point-label {
+  position: relative;
+  padding-left: 22px;
+}
+.domhotel-room__point-label:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-room__point-label:before {
+  font-size: 1.6rem;
+  color: #999;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -.4em;
+}
+.domhotel-room__point-list {
+  padding-left: 1em;
+}
+.domhotel-room__point-list > li {
+  display: inline-block;
+  margin-right: 5px;
+}
+.domhotel-room__info-list > li {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid #d7d7d7;
+  padding: 10px 0;
+  line-height: 1.4;
+}
+.domhotel-room__info-label {
+  font-weight: bold;
+  width: 8em;
+  min-width: 8em;
+}
+
+/* pay-tbl 部屋割り 修正20200622 */
+.domhotel-room-pay-tbl {
+  margin-bottom: 20px;
+  width: 100%;
+}
+.domhotel-room-pay-tbl th,
+.domhotel-room-pay-tbl td {
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+}
+.domhotel-room-pay-tbl th:nth-child(5),
+.domhotel-room-pay-tbl td:nth-child(5) {
+  width: 7em;
+  text-align: center;
+}
+.domhotel-room-pay-tbl th {
+  font-size: 1.5rem;
+  text-align: center;
+  white-space: nowrap;
+  padding: 1rem 1.5rem;
+  width: 10rem;
+}
+.domhotel-room-pay-tbl td {
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+.domhotel-room-pay-tbl__people-box {
+  text-align: left;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.domhotel-room-pay-tbl__people-box .domhotel-people-box {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.domhotel-room-pay-tbl__people-box .domhotel-people-box__label {
+  font-size: 1.4rem;
+  width: 100%;
+}
+.domhotel-room-pay-tbl__people-box .domhotel-people-box + .domhotel-people-box {
+  width: 24rem;
+  margin-left: 2rem;
+}
+.domhotel-room-pay-tbl__people-box .domhotel-room-people {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.domhotel-room-pay-tbl__people-box .domhotel-room-people:not(:last-child) {
+  margin-right: 2rem;
+}
+.domhotel-room-pay-tbl__people-box .domhotel-room-people__number {
+  margin-left: .5em;
+}
+.domhotel-room-pay-tbl__people-box .domhotel-room-people__pulldown {
+  width: 8rem;
+  text-align: left;
+  z-index: inherit;
+}
+.domhotel-room-pay-tbl__people-box .domhotel-room-people__pulldown .dom-form-pulldown__input input {
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  color: #125687;
+  height: 3rem;
+}
+.domhotel-room-pay-tbl__people-box .domhotel-room-people__pulldown .dom-form-pulldown__panel {
+  border: none;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+}
+.domhotel-room-pay-tbl__people-box .domhotel-room-people__child span {
+  display: inline-block;
+}
+.domhotel-room-pay-tbl__people-box .domhotel-room-people__child span:not(:last-child) {
+  margin-right: 1em;
+}
+.domhotel-room-pay-tbl__label {
+  display: block;
+}
+.domhotel-room-pay-tbl__price-unit, .domhotel-room-pay-tbl__price-total {
+  white-space: nowrap;
+  display: inline-block;
+}
+.domhotel-room-pay-tbl__price-unit em, .domhotel-room-pay-tbl__price-total em {
+  font-size: 1.8rem;
+  margin-right: .3em;
+}
+.domhotel-room-pay-tbl__price-unit {
+  width: 13em;
+}
+.domhotel-room-pay-tbl__price-total {
+  width: 8em;
+}
+.domhotel-room-pay-tbl__price-breakdown {
+  font-weight: 500;
+  display: inline-block;
+  position: relative;
+}
+.domhotel-room-pay-tbl__price-breakdown:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-room-pay-tbl__price-breakdown:before {
+  font-size: 1.2rem;
+  letter-spacing: .3em;
+}
+
+/* meal
+---------------------------------------------------------- */
+.domhotel-meal__point {
+  margin-bottom: 20px;
+}
+.domhotel-meal__point-ico {
+  margin-left: .5em;
+  display: inline-block;
+  line-height: 1;
+  padding: 8px 12px;
+  background-color: #ececec;
+}
+.domhotel-meal__info-list > li {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid #d7d7d7;
+  padding: 10px 0;
+  line-height: 1.4;
+}
+.domhotel-meal__info-label-01 {
+  font-weight: bold;
+  width: 3em;
+  min-width: 3em;
+  white-space: nowrap;
+}
+.domhotel-meal__info-label-02 {
+  text-align: center;
+  white-space: nowrap;
+}
+.domhotel-meal__info-label-02:before {
+  content: "［";
+}
+.domhotel-meal__info-label-02:after {
+  content: "］";
+}
+.domhotel-meal__info-data {
+  padding-left: 1em;
+}
+.domhotel-meal__txt-01 {
+  margin-bottom: 1.5em;
+}
+.domhotel-meal__in {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.domhotel-meal__image {
+  width: 30rem;
+  text-align: center;
+}
+.domhotel-meal__image-caption {
+  font-size: 1.2rem;
+  line-height: 1.4;
+  padding: 10px 0;
+  text-align: center;
+}
+.domhotel-meal__detail {
+  padding-right: 40px;
+  width: calc(100% - 30rem);
+}
+.domhotel-meal__detail-02 {
+  width: 100%;
+}
+.domhotel-meal__tbl {
+  width: 100%;
+  border-top: 1px solid #d7d7d7;
+}
+.domhotel-meal__tbl th {
+  padding: 15px 0;
+  vertical-align: top;
+  font-weight: bold;
+  border-bottom: 1px solid #d7d7d7;
+}
+.domhotel-meal__tbl td {
+  padding: 15px;
+  border-bottom: 1px solid #d7d7d7;
+}
+.domhotel-meal__tbl-02 {
+  width: 100%;
+  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+  text-align: left;
+}
+.domhotel-meal__tbl-02 th {
+  padding: 15px;
+  vertical-align: top;
+  font-weight: bold;
+  border-bottom: 1px dotted #d7d7d7;
+}
+.domhotel-meal__tbl-02 td {
+  padding: 15px;
+  border-bottom: 1px dotted #d7d7d7;
+}
+.domhotel-meal__tbl-02-ttl {
+  background-color: #f5f5f5;
+  padding: 15px;
+}
+.domhotel-meal__more {
+  margin-top: 20px;
+  text-align: center;
+}
+.domhotel-meal__more-content {
+  padding-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* special - 特別料理 */
+.domhotel-meal-special {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.domhotel-meal-special__item {
+  width: 31%;
+  margin-right: 3.5%;
+  margin-bottom: 40px;
+}
+.domhotel-meal-special__item:nth-child(3n) {
+  margin-right: 0;
+}
+.domhotel-meal-special__ttl {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-bottom: .8em;
+  font-weight: bold;
+}
+.domhotel-meal-special__tbl {
+  width: 100%;
+  border-top: 1px solid #d7d7d7;
+}
+.domhotel-meal-special__tbl th {
+  padding: 8px 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #d7d7d7;
+  background-color: #f5f5f5;
+  font-size: 1.2rem;
+  width: 10rem;
+  white-space: nowrap;
+}
+.domhotel-meal-special__tbl td {
+  padding: 8px 0 8px 10px;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+/* restaurant - レストラン */
+.domhotel-restaurant__txt-01 {
+  margin-bottom: 1.5em;
+}
+.domhotel-restaurant__list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.domhotel-restaurant__item {
+  width: 48%;
+  padding: 30px 0;
+}
+.domhotel-restaurant__ttl {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+.domhotel-restaurant__in {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.domhotel-restaurant__column-01 {
+  width: 24rem;
+}
+.domhotel-restaurant__column-02 {
+  width: calc(100% - 24rem);
+  padding-left: 25px;
+}
+.domhotel-restaurant__image {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.domhotel-restaurant__info {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.domhotel-restaurant__info > dt {
+  text-align: left;
+  padding-left: 1.2em;
+  position: relative;
+}
+.domhotel-restaurant__info > dt:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-restaurant__info > dt:before {
+  color: #777;
+  position: absolute;
+  top: 4px;
+  left: 0;
+}
+.domhotel-restaurant__info > dd:before {
+  content: "：";
+}
+.domhotel-restaurant__detail {
+  margin-bottom: 1em;
+}
+.domhotel-restaurant__detail-ttl {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* restaurant-slider - レストランスライダー */
+.domhotel-restaurant-slider {
+  margin: 30px 0 20px;
+  padding: 0 35px;
+}
+.domhotel-restaurant-slider .slick-slide {
+  padding: 0 10px;
+}
+.domhotel-restaurant-slider .slick-caption {
+  margin-top: .8em;
+}
+.domhotel-restaurant-slider .slick-prev,
+.domhotel-restaurant-slider .slick-next {
+  bottom: auto;
+  top: 50px;
+}
+
+/* restaurant-tbl - レストラン情報 */
+.domhotel-restaurant-tbl {
+  width: 100%;
+  border-top: 1px solid #d7d7d7;
+}
+.domhotel-restaurant-tbl th {
+  padding: 8px 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #d7d7d7;
+  background-color: #f5f5f5;
+  font-size: 1.2rem;
+  width: 10rem;
+  white-space: nowrap;
+}
+.domhotel-restaurant-tbl td {
+  padding: 8px 0 8px 10px;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+/* map
+---------------------------------------------------------- */
+/* map - search btn 地図から探すボタン */
+.domhotel-map-search-btn {
+  height: 106px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 4px solid #fff;
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+}
+.domhotel-map-search-btn:hover {
+  opacity: .8;
+}
+.domhotel-map-search-btn__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 106px;
+  width: 100%;
+}
+.domhotel-map-search-btn__txt {
+  width: 100%;
+  height: 34px;
+  padding: 4px 10px 0 10px;
+  background-color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #125687;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+.domhotel-map-search-btn__txt:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-map-search-btn__txt:before {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -.3em;
+  font-size: 1.2rem;
+}
+.domhotel-map-search-btn__txt span {
+  position: relative;
+}
+.domhotel-map-search-btn__txt span:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-map-search-btn__txt span:before {
+  font-size: 2rem;
+  margin-right: .3em;
+}
+
+/* map - コンテナ */
+.domhotel-map {
+  position: absolute;
+  top: 45px;
+  left: 20px;
+  background-color: #f7f7f7;
+  border: 2px solid #195178;
+  width: 82.5rem;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+  /*visibility: hidden;
+  transition: all .1s ease 0s;
+  opacity: 0;*/
+  display: none;
+  /*&.is-show{ visibility: visible; opacity: 1;}*/
+}
+.domhotel-map.is-fixed {
+  position: fixed;
+  top: 0;
+  left: auto;
+}
+.domhotel-map__header {
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 0 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.domhotel-map__header-ttl {
+  font-size: 1.6rem;
+  line-height: 50px;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.domhotel-map__map {
+  height: 100%;
+  width: 100%;
+  padding: 50px 0 60px;
+  position: relative;
+}
+.domhotel-map__map-container {
+  height: 100%;
+  position: relative;
+}
+.domhotel-map__btn-hide {
+  z-index: 10;
+  background-color: #fff;
+  font-size: 1.3rem;
+  line-height: 1;
+  font-weight: normal;
+  cursor: pointer;
+  color: #125687;
+  padding: 18px;
+  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.domhotel-map__btn-hide:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-map__btn-hide:before {
+  font-size: 1.1rem;
+  margin-right: .5em;
+}
+.domhotel-map__pin, .domhotel-map__pin-spot {
+  position: absolute;
+  cursor: pointer;
+  width: 24px;
+  height: 34px;
+  z-index: 10;
+  background-image: url(../../../assets/images/dom/1.0/ico-map-pin.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.domhotel-map__pin.is-active, .domhotel-map__pin-spot.is-active {
+  background-image: url(../../../assets/images/dom/1.0/ico-map-pin-on.png);
+  z-index: 12;
+}
+.domhotel-map__pin:hover .domhotel-map__tooltip, .domhotel-map__pin-spot:hover .domhotel-map__tooltip {
+  display: block;
+}
+.domhotel-map__pin {
+  background-image: url(../../../assets/images/dom/1.0/ico-map-pin.png);
+}
+.domhotel-map__pin-spot {
+  background-image: url(../../../assets/images/dom/1.0/ico-map-pin-spot.png);
+}
+.domhotel-map__pin-group-l, .domhotel-map__pin-group-s {
+  position: absolute;
+  cursor: pointer;
+  height: 38px;
+  z-index: 10;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  color: #fff;
+  font-size: 12px;
+  line-height: 28px;
+  font-weight: bold;
+  text-align: center;
+}
+.domhotel-map__pin-group-l em, .domhotel-map__pin-group-s em {
+  font-size: 14px;
+}
+.domhotel-map__pin-group-l {
+  width: 54px;
+  background-image: url(../../../assets/images/dom/1.0/ico-map-group-pin-l.png);
+}
+.domhotel-map__pin-group-s {
+  width: 42px;
+  background-image: url(../../../assets/images/dom/1.0/ico-map-group-pin-s.png);
+}
+.domhotel-map__tooltip {
+  background-color: #fff;
+  line-height: 1.4;
+  position: absolute;
+  top: 0;
+  padding: 8px 10px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.3);
+  margin-top: -12px;
+  display: none;
+}
+.domhotel-map__tooltip:after {
+  content: "";
+  border-style: solid;
+  margin-top: -6px;
+}
+.domhotel-map__tooltip.is-right {
+  left: calc(100% + 10px);
+}
+.domhotel-map__tooltip.is-right:after {
+  border-color: transparent #fff transparent transparent;
+  border-width: 6px 6px 6px 0;
+  position: absolute;
+  top: 50%;
+  left: -6px;
+}
+.domhotel-map__tooltip.is-left {
+  right: calc(100% + 10px);
+}
+.domhotel-map__tooltip.is-left:after {
+  border-color: transparent transparent transparent #fff;
+  border-width: 6px 0 6px 6px;
+  position: absolute;
+  top: 50%;
+  right: -6px;
+}
+.domhotel-map__tooltip-area {
+  font-size: 1rem;
+  display: block;
+}
+.domhotel-map__tooltip-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+}
+.domhotel-map__location {
+  position: absolute;
+  background: url(../../../assets/images/dom/1.0/ico-location.png) no-repeat 0 0;
+  background-size: contain;
+  width: 28px;
+  height: 28px;
+  z-index: 11;
+}
+.domhotel-map--new {
+  z-index: 12;
+}
+.domhotel-map--new .domhotel-map__map {
+  padding-bottom: 0;
+}
+
+/* map - box 施設概要 */
+.domhotel-map-box {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  top: 55px;
+  right: 5px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  max-width: 52rem;
+  line-height: 1.4;
+  z-index: 100;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transform-origin: top right;
+  transform-origin: top right;
+}
+.domhotel-map-box.is-active {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.domhotel-map-box__close {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 7px 8px;
+  line-height: 1;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.domhotel-map-box__close:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-map-box__close:hover {
+  opacity: .8;
+}
+.domhotel-map-box__close:before {
+  color: #fff;
+  font-size: 1rem;
+}
+.domhotel-map-box__figure img {
+  max-width: 20rem;
+  max-height: 15rem;
+}
+.domhotel-map-box__in {
+  padding: 10px 12px;
+}
+.domhotel-map-box__area {
+  font-size: 1rem;
+  margin-bottom: .3rem;
+}
+.domhotel-map-box__name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.domhotel-map-box__row {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-map-box__rating .dom-rating-stars {
+  transform-origin: 0 0;
+  transform: scale(0.85);
+}
+.domhotel-map-box__rating .dom-rating__score {
+  padding-left: 0;
+  font-size: 1rem;
+}
+.domhotel-map-box__rating .dom-rating__score em {
+  font-size: 1.2rem;
+}
+.domhotel-map-box__price {
+  margin-left: auto;
+  padding-left: 1rem;
+  text-align: right;
+}
+.domhotel-map-box__price .domhotel-total-label {
+  margin-bottom: .4rem;
+  color: #777;
+  white-space: nowrap;
+}
+.domhotel-map-box__price .domhotel-total-label .domhotel-people {
+  display: inline-block;
+}
+.domhotel-map-box__price .domhotel-total-label .domhotel-tax {
+  display: inline-block;
+  margin-left: .2em;
+}
+.domhotel-map-box__price .domhotel-total-label .domhotel-tooltip-link {
+  display: inline-block;
+  font-size: 1rem;
+  position: relative;
+  padding-right: 1.3em;
+  cursor: pointer;
+  position: relative;
+}
+.domhotel-map-box__price .domhotel-total-label .domhotel-tooltip-link:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-map-box__price .domhotel-total-label .domhotel-tooltip-link:before {
+  font-size: 1.2rem;
+  color: #999;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -.5em;
+}
+.domhotel-map-box__price .domhotel-total-label .domhotel-tooltip-link:hover .domhotel-tooltip-content {
+  opacity: 1;
+  visibility: visible;
+}
+.domhotel-map-box__price .domhotel-total-label .domhotel-tooltip-content {
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  white-space: nowrap;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  padding: .5rem 1rem;
+  margin-bottom: .5rem;
+  border-radius: 4px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s;
+  z-index: 1;
+}
+.domhotel-map-box__price .domhotel-total-price {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-end;
+  align-items: flex-end;
+}
+.domhotel-map-box__price .domhotel-total-price .domhotel-from,
+.domhotel-map-box__price .domhotel-total-price .domhotel-to {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1;
+}
+.domhotel-map-box__price .domhotel-total-price .domhotel-from em,
+.domhotel-map-box__price .domhotel-total-price .domhotel-to em {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.domhotel-map-box__btn {
+  margin-top: 1rem;
+  text-align: center;
+}
+.domhotel-map-box__btn > a {
+  min-width: 20rem;
+  display: inline-block;
+  border: none;
+  font-size: 1.2rem;
+  line-height: 30px;
+}
+.domhotel-map-box__btn > a span:before {
+  font-size: 1em;
+}
+.domhotel-map-box .domhotel-error {
+  background: transparent;
+  padding: 0;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.3;
+  margin: 0;
+}
+.domhotel-map-box .domhotel-error:before {
+  position: static;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .3em;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+/* map - box-02 施設概要 */
+.domhotel-map-box-02 {
+  background-color: #fff;
+}
+.domhotel-map-box-02.is-active {
+  background: #d0e8ff;
+}
+.domhotel-map-box-02__delete {
+  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  line-height: 1;
+  cursor: pointer;
+}
+.domhotel-map-box-02__delete:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-map-box-02__delete:hover {
+  opacity: .8;
+}
+.domhotel-map-box-02__delete:before {
+  color: #999;
+  font-size: 1rem;
+}
+.domhotel-map-box-02__in {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.domhotel-map-box-02__name {
+  width: 100%;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: .8em;
+  padding-right: 20px;
+}
+.domhotel-map-box-02__image {
+  width: 8rem;
+}
+.domhotel-map-box-02__content {
+  width: calc(100% - 8rem);
+  text-align: right;
+}
+.domhotel-map-box-02__price {
+  margin-bottom: 4px;
+  line-height: 1.1;
+  text-align: right;
+}
+.domhotel-map-box-02__price em {
+  font-size: 1.4rem;
+  margin-right: .1em;
+}
+.domhotel-map-box-02__btn > a {
+  font-size: 1.1rem;
+  line-height: 22px;
+  border-radius: 3px;
+  display: inline-block;
+  padding: 0 6px;
+}
+
+/* map - access アクセス情報 */
+.domhotel-map-access {
+  position: relative;
+}
+.domhotel-map-access__map {
+  height: 500px;
+  width: 100%;
+  position: relative;
+}
+.domhotel-map-access__pin {
+  position: absolute;
+  cursor: pointer;
+  min-width: 20px;
+  width: 30px;
+  height: 50px;
+}
+.domhotel-map-access__pin:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../../../assets/images/dom/1.0/ico-map-pin.svg) no-repeat 0 0;
+  background-size: contain;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.domhotel-map-access__pin:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 6px 6px rgba(0, 0, 0, 0.4);
+  background-color: transparent;
+  z-index: 0;
+  transform: scaleY(0.5);
+}
+
+/* map - info-box 施設概要 */
+.domhotel-map-info-box {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  width: 28rem;
+  line-height: 1.4;
+  border: 1px solid #195178;
+  z-index: 100;
+}
+.domhotel-map-info-box:before, .domhotel-map-info-box:after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 20px 10px 0 10px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+}
+.domhotel-map-info-box:before {
+  border-color: #195178 transparent transparent transparent;
+  bottom: -20px;
+  z-index: 101;
+}
+.domhotel-map-info-box:after {
+  border-color: #fff transparent transparent transparent;
+  bottom: -18px;
+  z-index: 102;
+}
+.domhotel-map-info-box.is-active {
+  display: block;
+}
+.domhotel-map-info-box__close {
+  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  line-height: 1;
+  cursor: pointer;
+}
+.domhotel-map-info-box__close:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-map-info-box__close:hover {
+  opacity: .8;
+}
+.domhotel-map-info-box__close:before {
+  color: #999;
+  font-size: 1rem;
+}
+.domhotel-map-info-box__in {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+.domhotel-map-info-box__name {
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: .8em;
+  padding-right: 20px;
+}
+.domhotel-map-info-box__image {
+  width: 8rem;
+}
+.domhotel-map-info-box__content {
+  width: calc(100% - 8rem);
+  text-align: right;
+  padding-left: 1em;
+}
+.domhotel-map-info-box__price {
+  margin-bottom: 10px;
+  text-align: right;
+}
+.domhotel-map-info-box__price em {
+  font-size: 1.4rem;
+  margin-right: .1em;
+}
+.domhotel-map-info-box__btn > a {
+  font-size: 1.1rem;
+  line-height: 26px;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+/* reserve 修正20200622
+---------------------------------------------------------- */
+/* reserve - section 予約条件入力エリア */
+.domhotel-reserve-section__txt-01 {
+  font-size: 1.6rem;
+  margin: 3rem 0 1.5rem;
+  padding: 1.5rem 2rem;
+  border: 1px solid #d7d7d7;
+}
+.domhotel-reserve-section .domhotel-condition-select {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column {
+  width: 40rem;
+  position: relative;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column:not(:last-child) {
+  margin-right: 2rem;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__box {
+  background: #f5f8fb;
+  border: 2px solid #125687;
+  position: relative;
+  cursor: pointer;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__box.is-selected {
+  background: #fff;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__label {
+  padding: 1.2rem 1rem 0;
+  color: #125687;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: 600;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__input {
+  position: relative;
+  color: #125687;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__input input {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  -webkit-appearance: none;
+  width: 100%;
+  color: #125687;
+  font-size: 1.5rem !important;
+  height: 4.8rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__input .domhotel-btn-clear {
+  position: relative;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 3rem;
+  height: 4.2rem;
+  cursor: pointer;
+  text-align: center;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__input .domhotel-btn-clear:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__input .domhotel-btn-clear:before {
+  color: #ccc;
+  line-height: 4.2rem;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel {
+  display: none;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel .domhotel-panel-overlay {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel .domhotel-panel-contents {
+  position: absolute;
+  top: 7.6rem;
+  left: 0;
+  margin-top: 1rem;
+  background: #fff;
+  border: 1px solid #999;
+  z-index: 10000;
+  padding: 5rem 2rem 2rem;
+  cursor: default;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel .domhotel-panel-contents .domhotel-panel-close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5rem;
+  height: 5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel .domhotel-panel-contents .domhotel-panel-close-btn:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #bbb;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel .domhotel-panel-contents--calendar {
+  width: 74rem;
+  padding-top: 3rem;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel .domhotel-panel-contents--calendar .dom-note-list-type-03 {
+  margin-top: .5rem;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel .domhotel-panel-contents--calendar .dom-ico-stock-03 {
+  color: #df9055;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel .domhotel-panel-contents--people {
+  min-width: 100%;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel .domhotel-panel-contents--people .dom-spinbox--room {
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #d7d7d7;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel .domhotel-panel-contents--people .dom-spinbox--room .dom-spinbox__label--room:before {
+  display: none;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel .domhotel-panel-contents--people .dom-spinbox__note {
+  border-top: none;
+  padding-top: 0;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel .domhotel-panel-contents--people .domhotel-room-total-count {
+  color: inherit;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column__panel .domhotel-panel-contents--people .domhotel-btn-cv-01 {
+  margin: 1rem auto 0;
+  width: 24rem;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column.is-active .domhotel-select-column__box {
+  z-index: 10000;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column.is-active .domhotel-select-column__panel {
+  display: block;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column--checkin .domhotel-select-column__input:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  margin-top: -.5em;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column--checkin .domhotel-select-column__input input {
+  padding: 0 3rem;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column--people .domhotel-select-column__input:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  margin-top: -.5em;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column--people .domhotel-select-column__input input {
+  padding: 0 3rem;
+}
+.domhotel-reserve-section .domhotel-condition-select .domhotel-select-column .domhotel-reserve-error-txt {
+  margin: .5em 0 0;
+}
+.domhotel-reserve-section .domhotel-room-select {
+  margin-top: 3rem;
+}
+.domhotel-reserve-section .domhotel-room-select__heading {
+  font-size: 1.6rem;
+  margin-bottom: .5em;
+}
+.domhotel-reserve-section .dom-reserve__txt-02 {
+  text-align: right;
+  margin-top: 0;
+}
+.domhotel-reserve-section .domhotel-reserve-online {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+.domhotel-reserve-section .domhotel-reserve-online__pay {
+  text-align: right;
+  padding-right: 3rem;
+}
+.domhotel-reserve-section .domhotel-reserve-online__btn .dom-reserve__btn-01 {
+  margin-bottom: 0;
+}
+.domhotel-reserve-section .domhotel-reserve-online .domhotel-pay-total {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+}
+.domhotel-reserve-section .domhotel-reserve-online .domhotel-pay-total__label {
+  text-align: right;
+  line-height: 1.2;
+}
+.domhotel-reserve-section .domhotel-reserve-online .domhotel-pay-total__label .domhotel-tax {
+  display: block;
+  font-size: 1.3rem;
+}
+.domhotel-reserve-section .domhotel-reserve-online .domhotel-pay-total__price {
+  padding-left: 2rem;
+}
+.domhotel-reserve-section .domhotel-reserve-online .domhotel-pay-total__price em {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-right: .2em;
+}
+.domhotel-reserve-section .domhotel-reserve-online .domhotel-pay-total__price .domhotel-unset {
+  font-size: 2rem;
+  color: #999;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+  width: 7em;
+}
+.domhotel-reserve-section .domhotel-reserve-online .domhotel-point-info {
+  margin-top: 1em;
+}
+.domhotel-reserve-section .domhotel-reserve-online .domhotel-point-info__discount {
+  position: relative;
+  padding-left: 2.2rem;
+  display: inline-block;
+}
+.domhotel-reserve-section .domhotel-reserve-online .domhotel-point-info__discount:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-reserve-section .domhotel-reserve-online .domhotel-point-info__discount:before {
+  color: #fcaa05;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -.5em;
+}
+.domhotel-reserve-section .domhotel-reserve-online .domhotel-point-info__discount em {
+  font-weight: bold;
+  margin-right: .5em;
+}
+.domhotel-reserve-section .domhotel-reserve-online .domhotel-point-info__note {
+  display: block;
+}
+.domhotel-reserve-section .domhotel-reserve-online .dom-reserve__btn-01 > a {
+  width: 31rem;
+}
+.domhotel-reserve-section .domhotel-free-cancellation {
+  margin-top: 2rem;
+  text-align: right;
+}
+.domhotel-reserve-section .domhotel-free-cancellation__in {
+  display: inline-block;
+  border: 2px solid #e18d52;
+  line-height: 1.2;
+  padding: .8rem 2rem;
+  border-radius: 4rem;
+  position: relative;
+}
+.domhotel-reserve-section .domhotel-free-cancellation__in:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-reserve-section .domhotel-free-cancellation__in:before {
+  vertical-align: middle;
+  margin-right: .5rem;
+  color: #e18d52;
+}
+.domhotel-reserve-section .domhotel-free-cancellation__in em {
+  font-weight: bold;
+  color: #e18d52;
+}
+
+/* reserve - error/warning/alert アラートデザイン */
+.domhotel-reserve-error {
+  background: #fbedef;
+  padding: 1.2rem 2rem 1.2rem 4.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.domhotel-reserve-error:before {
+  content: "";
+  background: url(../images/ico-error.svg) no-repeat center center;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 1.2rem;
+  left: 2rem;
+}
+
+.domhotel-reserve-error-txt {
+  padding: .2rem 0 0 2.4rem;
+  margin-bottom: 1.5rem;
+  color: #cc0d21;
+  line-height: 1.4;
+  position: relative;
+}
+.domhotel-reserve-error-txt:before {
+  content: "";
+  background: url(../images/ico-error.svg) no-repeat center center;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.domhotel-reserve-warning {
+  background: #fef6f0;
+  padding: 1.2rem 2rem 1.2rem 4.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.domhotel-reserve-warning:before {
+  content: "";
+  background: url(../images/ico-warning.svg) no-repeat center center;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 1.2rem;
+  left: 2rem;
+}
+
+.domhotel-reserve-alert {
+  background: #ecf9ff;
+  padding: 1.2rem 2rem 1.2rem 4.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.domhotel-reserve-alert:before {
+  content: "";
+  background: url(../images/ico-alert.svg) no-repeat center center;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 1.2rem;
+  left: 2rem;
+}
+
+/* 既存モーダルの表示位置を画面中央に変更 */
+.mfp-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mfp-content .dom-modal {
+  top: auto;
+  margin: 0 !important;
+  position: static;
+}
+
+.mfp-bg {
+  opacity: .5;
+}
+
+.mfp-close {
+  text-indent: -10000px;
+  font-size: 2rem;
+}
+.mfp-close:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-indent: 0;
+}
+
+/* 人数・室数パネル 修正20191108
+---------------------------------------------------------- */
+.domhotel-reserve-section .domhotel-search__people .dom-search__panel--people {
+  width: 100%;
+}
+.domhotel-reserve-section .dom-spinbox__label {
+  padding-left: 0;
+}
+
+/* ローディング中ボタン 追加20200229
+---------------------------------------------------------- */
+.domhotel-reserve-section .dom__btn-cv-01.is-loading > a {
+  background-color: #f9fafc;
+  background: #f9fafc;
+  border-color: #f9fafc;
+  color: #ccc;
+  position: relative;
+  pointer-events: none;
+}
+.domhotel-reserve-section .dom__btn-cv-01.is-loading > a:after {
+  content: "";
+  background: url(../images/ico-loading-01.gif) no-repeat center center;
+  background-size: contain;
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body.is-panel-active #page_header .str_segment.-site_nav .site_nav > ul {
+  z-index: auto;
+}
+body.is-panel-active .dom-btn-history-fixed {
+  display: none;
+}
+
+/* calendar
+---------------------------------------------------------- */
+.domhotel-calendar-info {
+  margin-bottom: .5em;
+}
+.domhotel-calendar-info em {
+  background: #fbedef;
+}
+
+.domhotel-calendar__selected {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+}
+.domhotel-calendar__selected-label {
+  font-size: 1.4rem;
+}
+.domhotel-calendar__selected-date {
+  font-size: 2rem;
+  font-weight: bold;
+  min-width: 6.5em;
+  text-align: center;
+}
+.domhotel-calendar__selected .dom-search__column {
+  float: none;
+  margin: 0 0 0 1em;
+}
+.domhotel-calendar__selected .dom-search__column input {
+  font-weight: bold;
+}
+.domhotel-calendar__selected .dom-search__column .dom-search__panel {
+  top: auto;
+  bottom: 100%;
+  margin: 0 0 -1px 0;
+}
+.domhotel-calendar__header {
+  border-style: solid;
+  border-width: 1px 1px 0 1px;
+  border-color: #d7d7d7;
+  padding: 15px;
+  position: relative;
+}
+.domhotel-calendar__month {
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
+}
+.domhotel-calendar__arr {
+  position: relative;
+  position: absolute;
+  top: 0;
+  line-height: 18px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 16px;
+}
+.domhotel-calendar__arr:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-calendar__arr:hover {
+  opacity: .8;
+}
+.domhotel-calendar__arr:before {
+  font-size: 1.6rem;
+  color: #999;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -.5em;
+}
+.domhotel-calendar__arr--prev {
+  padding-left: 35px;
+  left: 0;
+}
+.domhotel-calendar__arr--prev:before {
+  left: 15px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.domhotel-calendar__arr--next {
+  padding-right: 35px;
+  right: 0;
+}
+.domhotel-calendar__arr--next:before {
+  right: 15px;
+}
+.domhotel-calendar__tbl {
+  border: 1px solid #d7d7d7;
+  width: 100%;
+}
+.domhotel-calendar__tbl th {
+  background: #f5f8fb;
+  border: 1px solid #d7d7d7;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: center;
+  width: 10rem;
+  max-width: 10rem;
+}
+.domhotel-calendar__tbl th.dom-sunday {
+  background: #fdf6f6;
+}
+.domhotel-calendar__tbl th.dom-saturday {
+  background: #f7fbfe;
+}
+.domhotel-calendar__tbl td {
+  border: 1px solid #d7d7d7;
+  text-align: center;
+  width: 9.9rem;
+  max-width: 9.9rem;
+}
+.domhotel-calendar__date-in {
+  position: relative;
+  padding: 30px 0 0 0;
+  width: 100%;
+  height: 9rem;
+  cursor: pointer;
+}
+.domhotel-calendar__date-in:hover {
+  background: #f8fdff;
+}
+.domhotel-calendar__date-in.is-active {
+  background: #c2eafe;
+  font-weight: bold;
+}
+.domhotel-calendar__date-in.is-active em {
+  font-weight: bold;
+}
+.domhotel-calendar__date--disabled {
+  background: #f5f8fb;
+  color: #aaa;
+}
+.domhotel-calendar__date--disabled .domhotel-calendar__date-in:hover {
+  background: initial;
+  cursor: default;
+}
+.domhotel-calendar__date--disabled .domhotel-calendar__price {
+  color: #aaa;
+}
+.domhotel-calendar__day {
+  position: absolute;
+  top: 9px;
+  left: 7px;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+.domhotel-calendar__status {
+  position: absolute;
+  top: 9px;
+  right: 7px;
+  line-height: 1;
+}
+.domhotel-calendar__stock {
+  font-size: 1.6rem;
+  vertical-align: middle;
+}
+.domhotel-calendar__price {
+  line-height: 1.3;
+  min-height: 36px;
+  color: #125687;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.domhotel-calendar__price-total {
+  width: 100%;
+  font-size: 1.3rem;
+}
+.domhotel-calendar__price-total em {
+  font-size: 1.6rem;
+}
+.domhotel-calendar__price-unit {
+  width: 100%;
+  font-size: 1.1rem;
+}
+.domhotel-calendar__price-unit em {
+  font-size: 1.2rem;
+}
+.domhotel-calendar__room-note {
+  color: #777;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  margin-top: .4em;
+}
+.domhotel-calendar__room-note em {
+  color: #cc0d21;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 .1em;
+}
+.domhotel-calendar__pager {
+  margin-bottom: 1em;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.domhotel-calendar__pager-label:after {
+  content: "：";
+}
+.domhotel-calendar__pager-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.domhotel-calendar__pager-list > li {
+  margin: 0 .8em;
+}
+
+.domhotel-calendar-action {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.domhotel-calendar-action__right {
+  margin-left: auto;
+  width: 24rem;
+}
+
+/* modal
+---------------------------------------------------------- */
+/* 最近見た施設 */
+.domhotel-modal-recent__in {
+  padding: 10px;
+}
+.domhotel-modal-recent__ttl {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.domhotel-modal-recent__txt-01 {
+  margin-bottom: 1em;
+}
+.domhotel-modal-recent__list > li {
+  padding: 10px 0 10px 25px;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: relative;
+}
+.domhotel-modal-recent__list > li:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-modal-recent__list > li:before {
+  color: #999;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -.5em;
+}
+
+/* 子供の人数入力 */
+.domhotel-modal-child-number__in {
+  padding: 10px;
+}
+.domhotel-modal-child-number__ttl {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.domhotel-modal-child-number__select-btn {
+  cursor: pointer;
+  margin: 15px auto 0;
+  width: 14rem;
+}
+
+/* 部屋ごとの料金内訳 */
+.domhotel-modal-breakdown__in {
+  padding: 10px;
+}
+.domhotel-modal-breakdown__in:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.domhotel-modal-breakdown__ttl {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.domhotel-modal-breakdown__tbl {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.domhotel-modal-breakdown__tbl caption {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-bottom: .3em;
+}
+.domhotel-modal-breakdown__tbl td,
+.domhotel-modal-breakdown__tbl th {
+  border: 1px solid #d7d7d7;
+  line-height: 1.4;
+}
+.domhotel-modal-breakdown__tbl thead {
+  background-color: #f5f5f5;
+}
+.domhotel-modal-breakdown__tbl thead th {
+  text-align: center;
+  font-weight: normal;
+  padding: 8px 15px;
+  width: 20%;
+}
+.domhotel-modal-breakdown__tbl tbody th {
+  text-align: left;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+.domhotel-modal-breakdown__tbl tbody td {
+  text-align: right;
+  font-size: 1.4rem;
+  padding: 10px 15px;
+}
+.domhotel-modal-breakdown__subtotal {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+.domhotel-modal-breakdown__total {
+  float: right;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-modal-breakdown__total-label {
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding-right: 20px;
+}
+.domhotel-modal-breakdown__total-price {
+  font-size: 2.4rem;
+}
+.domhotel-modal-breakdown__total-price em {
+  font-weight: bold;
+  margin-right: .2em;
+}
+.domhotel-modal-breakdown__note {
+  float: left;
+  width: 66%;
+  text-indent: -1em;
+  padding-left: 1em;
+}
+
+/* 子供の宿泊、ペットの宿泊、ノーマライゼーションについて */
+.domhotel-modal-about__in {
+  padding: 10px;
+}
+.domhotel-modal-about__ttl {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+.domhotel-modal-about__txt-01 {
+  margin-bottom: 1.5em;
+}
+.domhotel-modal-about__tbl {
+  width: 100%;
+}
+.domhotel-modal-about__tbl th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.domhotel-modal-about__tbl th,
+.domhotel-modal-about__tbl td {
+  border: 1px solid #d7d7d7;
+  padding: 15px;
+  text-align: left;
+}
+
+/* review
+---------------------------------------------------------- */
+/* レート★★★★共通スタイル */
+.dom-rrb-rating {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.dom-rrb-rating .dom-rrb-rating-score {
+  height: 100%;
+  text-align: left;
+  position: relative;
+  margin-right: .5rem;
+  display: inline-flex;
+}
+
+.dom-rrb-rating .dom-rrb-rating-star {
+  position: relative;
+  height: 100%;
+  width: 6.5rem;
+}
+
+.dom-rrb-rating .dom-rrb-rating-star .star-on:after {
+  z-index: 1;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  color: #fcaa05;
+  content: '★★★★★';
+  width: inherit;
+  overflow: hidden;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dom-rrb-rating .dom-rrb-rating-star .star-off {
+  width: 100%;
+}
+
+.dom-rrb-rating .dom-rrb-rating-star .star-off:after {
+  z-index: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  color: #fcaa05;
+  content: '☆☆☆☆☆';
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* review-total - 総合評価 */
+.domhotel-review-total-section {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 25px 20px 20px;
+}
+
+.domhotel-review-heading {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+.domhotel-review-heading__ttl {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-right: .5em;
+  display: inline;
+}
+
+.domhotel-review-total-note {
+  margin-bottom: 1.5em;
+}
+
+/* review-total-box - 総合評価＞ボックス */
+.domhotel-review-total-box {
+  border: 1px solid #999;
+  padding: 2.5rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-review-total-box__header {
+  width: 30%;
+  padding: 0 2.5rem 0 0;
+  text-align: center;
+}
+.domhotel-review-total-box__header .domhotel-overall-rating {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+.domhotel-review-total-box__header .domhotel-overall-rating__score {
+  margin-left: 1em;
+  letter-spacing: .2em;
+}
+.domhotel-review-total-box__header .domhotel-overall-rating__score em {
+  font-size: 2.8rem;
+  font-weight: bold;
+  letter-spacing: 0;
+  margin-right: .5rem;
+}
+.domhotel-review-total-box__header .domhotel-overall-rating .domhotel-no-data {
+  letter-spacing: 0;
+  color: #999;
+}
+.domhotel-review-total-box__header .dom-rrb-rating {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.domhotel-review-total-box__header .dom-rrb-rating .dom-rrb-rating-star {
+  font-size: 2.4rem;
+  height: 2.4rem;
+  width: 12rem;
+}
+.domhotel-review-total-box__header .domhotel-overall-count {
+  margin-top: 1rem;
+}
+.domhotel-review-total-box__header .domhotel-overall-count:before {
+  content: "（";
+}
+.domhotel-review-total-box__header .domhotel-overall-count:after {
+  content: "）";
+}
+.domhotel-review-total-box__body {
+  width: 70%;
+  padding: 1rem 0 1rem 2.5rem;
+  border-left: 1px solid #999;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating {
+  width: 40%;
+  line-height: 1;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating:nth-child(n+3) {
+  margin-top: 1.5rem;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating__label {
+  width: 6em;
+  font-size: 1.4rem;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating__score {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .dom-rrb-rating .dom-rrb-rating-score-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .dom-rrb-rating .dom-rrb-rating-star {
+  font-size: 1.6rem;
+  height: 1.6rem;
+  width: 8rem;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip {
+  display: inline-block;
+  position: relative;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip-trigger {
+  color: #125687;
+  border-bottom: 1px dotted #125687;
+  display: inline-block;
+  padding: .3rem 1.5rem .3rem 0;
+  cursor: pointer;
+  position: relative;
+  position: relative;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip-trigger:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip-trigger:before {
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -.5em;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip-content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  transition: all .2s;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  padding: .8rem;
+  white-space: nowrap;
+  font-size: 1.2rem;
+  z-index: 10;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip-content:before {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+  border-width: 5px;
+  position: absolute;
+  bottom: 100%;
+  left: 2rem;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip-content .domhotel-breakdown-total {
+  display: inline;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip-content .domhotel-breakdown-total em {
+  font-weight: bold;
+  margin-left: .3em;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip-content .domhotel-breakdown-list {
+  display: inline;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip-content .domhotel-breakdown-list:before {
+  content: "（";
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip-content .domhotel-breakdown-list:after {
+  content: "）";
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip-content .domhotel-breakdown-list > li {
+  display: inline;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip-content .domhotel-breakdown-list > li:not(:last-child) {
+  margin-right: .5em;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip-content .domhotel-breakdown-list > li em {
+  font-weight: bold;
+  margin-left: .3em;
+}
+.domhotel-review-total-box__body .domhotel-detail-rating .domhotel-breakdown-tooltip:hover .domhotel-breakdown-tooltip-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.domhotel-review-total-box--no-data {
+  display: block;
+  width: 40%;
+  margin: 0 auto 2rem;
+}
+.domhotel-review-total-box--no-data .domhotel-review-total-box__header {
+  width: auto;
+}
+
+/* review-user - レビュー詳細 */
+.domhotel-review-user-section {
+  margin-bottom: 4rem;
+}
+
+.domhotel-review-user-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 4rem 0 2rem;
+  padding-bottom: .8em;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+/* review-search - レビュー詳細＞検索 */
+.domhotel-review-search {
+  margin-bottom: 1rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.domhotel-review-search__column {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+  margin: 0 2.5rem 1rem 0;
+}
+.domhotel-review-search__column--age .dom-form-pulldown {
+  width: 120px;
+}
+.domhotel-review-search__column--type .dom-form-pulldown {
+  width: 150px;
+}
+.domhotel-review-search__column--sex .dom-form-pulldown {
+  width: 100px;
+}
+.domhotel-review-search__column--score .dom-form-pulldown {
+  width: 170px;
+}
+.domhotel-review-search__column--room {
+  margin-right: 0;
+}
+.domhotel-review-search__column--room .dom-form-pulldown {
+  width: 200px;
+}
+.domhotel-review-search__column--room .dom-form-pulldown__panel {
+  width: 300px;
+}
+.domhotel-review-search__column--room .dom-pulldown-list {
+  max-height: 300px;
+}
+.domhotel-review-search__label {
+  white-space: nowrap;
+  padding-right: .5em;
+}
+
+/* review-result-header - レビュー詳細＞検索結果情報 */
+.domhotel-review-result-header {
+  margin-bottom: 1.5rem;
+}
+.domhotel-review-result-header__sort {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.domhotel-review-result-header .dom-sort__item {
+  background-color: #fff;
+  border: 1px solid #999;
+  border-radius: 4px;
+  margin-right: .5em;
+  padding: .5rem 1rem;
+  line-height: 1;
+  transition: all .2s;
+}
+.domhotel-review-result-header .dom-sort__item:hover, .domhotel-review-result-header .dom-sort__item--active {
+  border-color: #666;
+  background-color: #666;
+  color: #fff;
+}
+.domhotel-review-result-header .domhotel-review-switch input {
+  display: none;
+}
+.domhotel-review-result-header .domhotel-review-switch label {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-review-result-header .domhotel-review-switch-btn {
+  margin-left: 1rem;
+  display: inline-block;
+  background-color: #bbb;
+  border-radius: 4rem;
+  width: 5rem;
+  height: 2rem;
+  position: relative;
+}
+.domhotel-review-result-header .domhotel-review-switch-btn:before {
+  content: "";
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  transition: all .2s;
+}
+.domhotel-review-result-header .domhotel-review-switch-btn:after {
+  content: "OFF";
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1;
+  width: 100%;
+  padding: 0 .8rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -.5em;
+  text-align: right;
+}
+.domhotel-review-result-header .domhotel-review-switch input:checked + label .domhotel-review-switch-btn {
+  background: transparent linear-gradient(112deg, #3498DB 0%, #52C8FF 100%) 0% 0% no-repeat padding-box;
+}
+.domhotel-review-result-header .domhotel-review-switch input:checked + label .domhotel-review-switch-btn:before {
+  left: calc(100% - 1.8rem);
+}
+.domhotel-review-result-header .domhotel-review-switch input:checked + label .domhotel-review-switch-btn:after {
+  content: "ON";
+  text-align: left;
+}
+.domhotel-review-result-header .domhotel-review-check input {
+  display: none;
+}
+.domhotel-review-result-header .domhotel-review-check label {
+  background-color: #fff;
+  border: 1px solid #125687;
+  border-radius: 4px;
+  padding: .5rem 1rem;
+  color: #125687;
+  line-height: 1;
+}
+.domhotel-review-result-header .domhotel-review-check input:checked + label {
+  color: #fff;
+  background-color: #125687;
+}
+
+/* review-user-list - レビュー詳細＞検索結果リスト */
+.domhotel-review-user-list {
+  margin-bottom: 3rem;
+}
+
+/* review-user-item - レビュー詳細＞ユーザーごと */
+.domhotel-review-user-item {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.domhotel-review-user-item__header {
+  width: 25%;
+  padding: 1rem 4rem 0 0;
+}
+.domhotel-review-user-item__body {
+  flex: 1;
+}
+.domhotel-review-user-item .domhotel-user-name {
+  position: relative;
+  padding-left: 2rem;
+}
+.domhotel-review-user-item .domhotel-user-name:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-review-user-item .domhotel-user-name:before {
+  font-size: 1.6rem;
+  color: #999;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -.5em;
+}
+.domhotel-review-user-item .domhotel-user-name em {
+  font-size: 1.5rem;
+  margin-right: .5em;
+}
+.domhotel-review-user-item .domhotel-user-meta {
+  margin-top: 1rem;
+  color: #777;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.domhotel-review-user-item .domhotel-user-meta > li {
+  border: 1px solid #d7d7d7;
+  font-size: 1.2rem;
+  margin: 0 .5rem .5rem 0;
+  padding: 0 .5rem;
+}
+.domhotel-review-user-item .domhotel-user-date {
+  margin-top: .5rem;
+  color: #777;
+}
+.domhotel-review-user-item .domhotel-user-ttl {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: .5em;
+}
+.domhotel-review-user-item .domhotel-user-comment {
+  font-size: 1.4rem;
+  margin-bottom: 1.5em;
+}
+.domhotel-review-user-item .domhotel-user-rating {
+  line-height: 1;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-review-user-item .domhotel-user-rating__label {
+  margin-right: 1em;
+}
+.domhotel-review-user-item .domhotel-user-rating__score {
+  margin-right: .5em;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-review-user-item .domhotel-user-rating__score .dom-rrb-rating .dom-rrb-rating-score {
+  margin: 0 0 0 .5em;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.domhotel-review-user-item .domhotel-user-rating__breakdown {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-review-user-item .domhotel-user-rating__breakdown:before {
+  content: "（";
+}
+.domhotel-review-user-item .domhotel-user-rating__breakdown:after {
+  content: "）";
+}
+.domhotel-review-user-item .domhotel-user-rating__breakdown > li:not(:last-child) {
+  margin-right: .8em;
+}
+.domhotel-review-user-item .domhotel-user-rating__breakdown > li em {
+  font-weight: bold;
+  margin-left: .3em;
+}
+.domhotel-review-user-item .domhotel-user-stay {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px dotted #d7d7d7;
+  color: #777;
+}
+.domhotel-review-user-item .domhotel-user-stay__item {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+.domhotel-review-user-item .domhotel-user-stay__item > dt:after {
+  content: "：";
+}
+.domhotel-review-user-item .domhotel-reply-box {
+  background-color: #f5f5f5;
+  border: 1px solid #d7d7d7;
+  border-radius: 6px;
+  margin-top: 2rem;
+  padding: 1.5rem;
+}
+.domhotel-review-user-item .domhotel-reply-box__header {
+  position: relative;
+  font-weight: bold;
+  padding-left: 2.4rem;
+  margin-bottom: .5em;
+}
+.domhotel-review-user-item .domhotel-reply-box__header:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-review-user-item .domhotel-reply-box__header:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -.5em;
+  color: #81d7ff;
+  font-size: 1.6rem;
+}
+
+/* gallery
+---------------------------------------------------------- */
+.domhotel-gallery {
+  padding: 20px 40px;
+  position: relative;
+}
+.domhotel-gallery .slick-arrow {
+  top: 272px;
+}
+.domhotel-gallery .slick-arrow:before {
+  font-size: 3rem;
+}
+.domhotel-gallery .slick-prev {
+  left: -18px;
+}
+.domhotel-gallery .slick-next {
+  right: -18px;
+}
+.domhotel-gallery .slick-caption {
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+.domhotel-gallery *:active {
+  outline: none;
+}
+.domhotel-gallery .slick-dots {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: -2px;
+  bottom: auto;
+}
+.domhotel-gallery .slick-dots > li {
+  width: 68px;
+  height: 40px;
+  padding: 2px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-gallery .slick-dots > li:hover {
+  opacity: .8;
+}
+.domhotel-gallery .slick-dots > li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .15s;
+}
+.domhotel-gallery .slick-dots > li img {
+  max-height: 100%;
+  margin: auto;
+}
+.domhotel-gallery .slick-dots > li.slick-active {
+  position: relative;
+}
+.domhotel-gallery .slick-dots > li.slick-active:before {
+  box-shadow: 0 0 0 3px #5298da inset;
+}
+.domhotel-gallery__figure {
+  height: 540px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-gallery__figure img {
+  max-height: 100%;
+}
+
+/* 画像切替 */
+.domhotel-gallery-nav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.domhotel-gallery-nav li {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0 1em;
+}
+.domhotel-gallery-nav li a {
+  display: inline-block;
+  padding: .5em 0;
+  opacity: .7;
+  text-decoration: none;
+}
+.domhotel-gallery-nav li a:hover {
+  opacity: .5;
+}
+.domhotel-gallery-nav li a.is-active {
+  color: #323743;
+  font-weight: bold;
+  opacity: 1;
+  position: relative;
+}
+.domhotel-gallery-nav li a.is-active:after {
+  content: "";
+  background-color: #000;
+  display: block;
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* bath
+---------------------------------------------------------- */
+.domhotel-bath-type {
+  font-size: 1.6rem;
+  margin: 0 0 1em .5em;
+  position: relative;
+}
+.domhotel-bath-type:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-bath-type:before {
+  color: #777;
+  margin-right: .5em;
+}
+
+/* 大浴場施設情報 スライダー*/
+.domhotel-bath-list {
+  margin: 30px 0 20px;
+  padding: 0 35px;
+}
+.domhotel-bath-list .slick-slide {
+  padding: 0 10px;
+}
+.domhotel-bath-list .slick-prev,
+.domhotel-bath-list .slick-next {
+  bottom: auto;
+  top: 50px;
+}
+.domhotel-bath-list__caption {
+  margin-top: .8em;
+}
+
+/* 大浴場施設情報 テーブル */
+.domhotel-bath-tbl-01 {
+  width: 100%;
+}
+.domhotel-bath-tbl-01__th {
+  background-color: #f5f5f5;
+  text-align: left;
+  width: 15rem;
+}
+.domhotel-bath-tbl-01__th, .domhotel-bath-tbl-01__td {
+  border: 1px solid #d7d7d7;
+  padding: 15px;
+}
+.domhotel-bath-tbl-01__child {
+  width: 100%;
+}
+.domhotel-bath-tbl-01__child tr:last-child th, .domhotel-bath-tbl-01__child tr:last-child td {
+  border-bottom: none;
+}
+.domhotel-bath-tbl-01__child-th {
+  border-bottom: 1px solid #d7d7d7;
+  font-weight: bold;
+  padding: 10px 5px;
+  width: 22rem;
+}
+.domhotel-bath-tbl-01__child-td {
+  border-bottom: 1px solid #d7d7d7;
+  padding: 10px 5px;
+}
+
+.domhotel-bath-tbl-02 {
+  width: 100%;
+}
+.domhotel-bath-tbl-02 th {
+  background-color: #f5f5f5;
+  text-align: left;
+  width: 15rem;
+}
+.domhotel-bath-tbl-02 th,
+.domhotel-bath-tbl-02 td {
+  border: 1px solid #d7d7d7;
+  padding: 15px;
+}
+
+/* various
+---------------------------------------------------------- */
+/* 施設案内文 */
+.domhotel-various-guide {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.domhotel-various-guide:last-child {
+  margin-bottom: 0;
+}
+.domhotel-various-guide__image {
+  width: 30rem;
+  max-width: 30rem;
+}
+.domhotel-various-guide__txt {
+  padding-right: 30px;
+  width: calc(100% - 30rem);
+}
+
+/* おすすめ */
+.domhotel-various-recommend {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.domhotel-various-recommend:last-child {
+  margin-bottom: 0;
+}
+.domhotel-various-recommend__image {
+  width: 40rem;
+  max-width: 40rem;
+}
+.domhotel-various-recommend__detail {
+  padding-left: 30px;
+  width: calc(100% - 40rem);
+}
+.domhotel-various-recommend__caption {
+  line-height: 1.4;
+  padding: 10px 0 0 0;
+  text-align: center;
+}
+.domhotel-various-recommend__ttl {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+.domhotel-various-recommend__catch {
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+.domhotel-various-recommend__room, .domhotel-various-recommend__time {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 1em;
+}
+.domhotel-various-recommend__room:before, .domhotel-various-recommend__time:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-various-recommend__room:before, .domhotel-various-recommend__time:before {
+  font-size: 1.6rem;
+  color: #999;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -.4em;
+}
+.domhotel-various-recommend__room {
+  position: relative;
+}
+.domhotel-various-recommend__room:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-various-recommend__time {
+  position: relative;
+}
+.domhotel-various-recommend__time:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-various-recommend .domhotel-plan-check-btn {
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+.domhotel-various-recommend__btn-detail {
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+.domhotel-various-recommend__btn-detail a {
+  display: inline-block;
+}
+
+/* area
+---------------------------------------------------------- */
+.domhotel-area {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+.domhotel-area__tab {
+  width: 10%;
+  min-width: 10%;
+}
+.domhotel-area__contents {
+  width: 90%;
+  min-width: 90%;
+  padding-left: 15px;
+}
+
+/* tab - タブ */
+.domhotel-area-tab__list {
+  height: 344px;
+}
+.domhotel-area-tab__list > li {
+  width: 100%;
+  height: 33.3333%;
+  display: table;
+}
+.domhotel-area-tab__list > li:first-child .domhotel-area-tab__item {
+  border-width: 1px;
+}
+.domhotel-area-tab__item {
+  position: relative;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  border-style: solid;
+  border-color: #d7d7d7;
+  border-width: 0 1px 1px 1px;
+}
+.domhotel-area-tab__item span {
+  display: inline-block;
+  font-size: 1.4rem;
+  color: #323743;
+}
+.domhotel-area-tab__item span:before, .domhotel-area-tab__item span:after {
+  color: #aaa;
+  display: block;
+  margin-bottom: 5px;
+  font-size: 2.4rem;
+}
+.domhotel-area-tab__item--area span {
+  position: relative;
+}
+.domhotel-area-tab__item--area span:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-area-tab__item--trans span {
+  position: relative;
+  position: relative;
+}
+.domhotel-area-tab__item--trans span:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-area-tab__item--trans span:after {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-area-tab__item--trans span:before {
+  margin-left: 24px;
+}
+.domhotel-area-tab__item--trans span:after {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: -15px;
+}
+.domhotel-area-tab__item--onsen span {
+  position: relative;
+}
+.domhotel-area-tab__item--onsen span:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-area-tab__item.is-active {
+  background-color: #195178;
+  border-color: #195178;
+}
+.domhotel-area-tab__item.is-active span {
+  color: #fff;
+}
+.domhotel-area-tab__item.is-active span:before, .domhotel-area-tab__item.is-active span:after {
+  color: #fff;
+}
+.domhotel-area-tab__item.is-active:after {
+  content: "";
+  display: block;
+  border-color: transparent transparent transparent #195178;
+  border-style: solid;
+  border-width: calc(344px / 6) 0 calc(344px / 6) 20px;
+  position: absolute;
+  top: 0;
+  right: -21px;
+  z-index: 1;
+}
+
+/* contents - タブのコンテンツ */
+.domhotel-area-contents__in {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+/* map - 地図 */
+.domhotel-area-map {
+  position: relative;
+  width: 57rem;
+}
+.domhotel-area-map__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.domhotel-area-map__label {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  color: #125687;
+  font-size: 1.2rem;
+  line-height: 1;
+  height: 21px;
+  padding: 5px 5px 5px 6px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 100;
+}
+.domhotel-area-map__label-number {
+  color: #777;
+  margin-left: .2em;
+}
+
+/* list - エリア一覧 */
+.domhotel-area-list {
+  padding-left: 20px;
+}
+.domhotel-area-list__heading {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.domhotel-area-list__heading:before {
+  color: #aaa;
+  font-size: 1.8rem;
+  margin-right: .5em;
+}
+.domhotel-area-list__heading--area {
+  position: relative;
+}
+.domhotel-area-list__heading--area:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-area-list__heading--trans {
+  position: relative;
+}
+.domhotel-area-list__heading--trans:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-area-list__heading--onsen {
+  position: relative;
+}
+.domhotel-area-list__heading--onsen:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-area-list__list > li {
+  margin-bottom: .5em;
+}
+.domhotel-area-list__label {
+  color: #125687;
+}
+.domhotel-area-list__label-number {
+  color: #777;
+  margin-left: .2em;
+}
+
+/* search - 再検索エリア 20201110修正 */
+.domhotel-section-search-area .dom-search-option__selected {
+  padding-right: 0;
+  text-align: left;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+.domhotel-section-search-area .dom-search-option__selected .dom-search-option__more-btn {
+  margin: 0;
+  padding: 0 1em 0 0;
+  white-space: nowrap;
+}
+.domhotel-section-search-area .dom-search-option__selected-list {
+  padding: 0 0 0 1em;
+  border-right: none;
+  border-left: 1px solid #aaa;
+  align-self: center;
+}
+
+/* planlist
+---------------------------------------------------------- */
+/* mv メインビジュアル */
+.domhotel-planlist-mv {
+  background: url(../images/bg-mv-planlist-01.jpg) no-repeat center center;
+  background-size: cover;
+  margin-bottom: 40px;
+}
+.domhotel-planlist-mv__in {
+  height: 240px;
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 70px 5px;
+}
+
+.domhotel-planlist-mv-copy {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 0 0 9px #000;
+  margin-bottom: 1em;
+}
+
+.domhotel-planlist-mv-ttl {
+  color: #fff;
+  font-size: 3.2rem;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 0 0 9px #000;
+}
+
+/* insex アンカーリンク */
+.domhotel-planlist-index {
+  margin-bottom: 20px;
+}
+
+.domhotel-planlist-index-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.domhotel-planlist-index-list > li {
+  margin: 0 5px 10px;
+}
+.domhotel-planlist-index-list > li a {
+  border: 1px solid #195178;
+  border-radius: 3px;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  color: #195178;
+  padding: 10px 10px 10px 30px;
+  display: block;
+  position: relative;
+  transition: background .2s;
+}
+.domhotel-planlist-index-list > li a:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-planlist-index-list > li a:hover {
+  background-color: #fff;
+  text-decoration: none;
+}
+.domhotel-planlist-index-list > li a:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  margin-top: -.5em;
+  font-size: 1rem;
+  transition: .2s;
+}
+
+/* section ブロック */
+.domhotel-planlist-section {
+  margin-bottom: 20px;
+}
+
+/* header ヘッダー */
+.domhotel-planlist-header {
+  margin-bottom: 10px;
+  border: 1px solid #195178;
+  border-radius: 4px;
+  padding: 25px 25px 25px 60px;
+  cursor: pointer;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+  position: relative;
+}
+.domhotel-planlist-header:hover {
+  opacity: .8;
+}
+.domhotel-planlist-header:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-planlist-header:before {
+  color: #195178;
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  margin-top: -.5em;
+  transition: .2s;
+}
+.domhotel-planlist-header.is-open:before {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.domhotel-planlist-header__ttl {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: normal;
+  color: #195178;
+  display: inline-block;
+}
+.domhotel-planlist-header__ico {
+  margin-left: 1em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.domhotel-planlist-header__txt {
+  font-size: 2rem;
+  font-weight: normal;
+  margin-left: 2em;
+  color: #195178;
+}
+
+/* contents コンテンツ */
+.domhotel-planlist-content {
+  display: none;
+  padding: 10px 0;
+}
+.domhotel-planlist-content.is-open {
+  display: block;
+}
+
+/* bnr-list バナーリスト */
+.domhotel-planlist-bnr-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 10px -10px 0;
+}
+.domhotel-planlist-bnr-list__item {
+  width: 25%;
+  padding: 0 10px;
+  margin-bottom: 30px;
+  display: block;
+}
+.domhotel-planlist-bnr-list.is-hide .domhotel-planlist-bnr-list__item:nth-child(n+5) {
+  display: none;
+}
+
+/* bnr バナー */
+.domhotel-planlist-bnr__image {
+  margin-bottom: 8px;
+}
+.domhotel-planlist-bnr__txt {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+
+/*btn-more もっと見る*/
+.domhotel-planlist-btn-more {
+  display: none;
+  margin: 10px 0 0 0;
+  text-align: center;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.domhotel-planlist-btn-more:hover {
+  opacity: .8;
+}
+.domhotel-planlist-btn-more > span {
+  color: #125687;
+  font-weight: bold;
+  position: relative;
+}
+.domhotel-planlist-btn-more > span:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-planlist-btn-more > span:before {
+  display: inline-block;
+  color: #323743;
+  font-size: 1.2rem;
+  margin-right: .8em;
+  transition: .2s;
+}
+.domhotel-planlist-btn-more.is-open > span:before {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.domhotel-planlist-btn-more span:after {
+  content: "もっと見る";
+}
+.domhotel-planlist-btn-more.is-show {
+  display: block;
+}
+.domhotel-planlist-btn-more.is-open span:after {
+  content: "閉じる";
+}
+
+/* link テキストバナー */
+.domhotel-planlist-link-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.domhotel-planlist-link-list__item {
+  margin: 0 5px 5px 0;
+}
+.domhotel-planlist-link-list.is-hide {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 40px;
+  overflow: hidden;
+}
+
+.domhotel-planlist-bnr-list.is-hide + .domhotel-planlist-link-list {
+  display: none;
+}
+
+.domhotel-planlist-link {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  color: #125687;
+  text-decoration: none;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: #333;
+  padding: 10px;
+  position: relative;
+  text-decoration: none;
+}
+
+/* header-small 小カテゴリ */
+.domhotel-planlist-header-small {
+  background: #333;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px 10px 10px 60px;
+  cursor: pointer;
+  position: relative;
+}
+.domhotel-planlist-header-small:hover {
+  opacity: .8;
+}
+.domhotel-planlist-header-small:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-planlist-header-small:before {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  margin-top: -.5em;
+  transition: .2s;
+}
+.domhotel-planlist-header-small.is-open:before {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.domhotel-planlist-header-small__ttl {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+/* section-small 小カテゴリブロック */
+.domhotel-planlist-section-small:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/* section
+---------------------------------------------------------- */
+.domhotel-section-search .dom-section-heading-03 {
+  margin-top: 0;
+}
+
+/* spotlist
+---------------------------------------------------------- */
+.domhotel-spotlist-section {
+  margin-bottom: 2rem;
+}
+
+.domhotel-spotlist-heading {
+  font-size: 1.6rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin: 2.5rem 0 1.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid #cc0d21;
+}
+
+.domhotel-spotlist-lead {
+  margin-bottom: 1em;
+}
+
+.domhotel-spotlist-list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -.5rem;
+  margin-right: -.5rem;
+}
+.domhotel-spotlist-list > li {
+  width: 20%;
+  padding: 0 .5rem 1rem;
+}
+.domhotel-spotlist-list > li a {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  padding: 1rem 2.5rem 1rem 1.5rem;
+  position: relative;
+  text-decoration: none;
+  transition: color .2s;
+}
+.domhotel-spotlist-list > li a:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-spotlist-list > li a:before {
+  color: #cc0d21;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  margin-top: -.5em;
+  font-size: .8em;
+}
+.domhotel-spotlist-list > li a:hover {
+  color: #cc0d21;
+}
+.domhotel-spotlist-list > li a.is-disabled {
+  pointer-events: none;
+  background-color: #e7e7e7;
+  color: #999;
+}
+.domhotel-spotlist-list > li a.is-disabled:before {
+  color: #999;
+}
+
+/* arealist
+---------------------------------------------------------- */
+.domhotel-arealist-index {
+  margin-bottom: 2rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.domhotel-arealist-index-ttl {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: #fff;
+  padding: 1.1rem 2rem;
+  margin: 5px 0;
+  background-color: #195178;
+  border-radius: 4px;
+  white-space: nowrap;
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.domhotel-arealist-index-ttl:before {
+  content: "";
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent #195178;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+}
+
+.domhotel-arealist-index-list {
+  padding-left: 2rem;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.domhotel-arealist-index-list > li {
+  margin: 5px;
+}
+.domhotel-arealist-index-list > li a {
+  border: 1px solid #195178;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #195178;
+  padding: 1rem 2rem 1rem 3rem;
+  display: block;
+  position: relative;
+  transition: background .2s;
+}
+.domhotel-arealist-index-list > li a:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-arealist-index-list > li a:hover {
+  background-color: #fff;
+  text-decoration: none;
+}
+.domhotel-arealist-index-list > li a:before {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  margin-top: -.5em;
+  font-size: 1rem;
+  transition: .2s;
+}
+
+.domhotel-arealist-link-planlist {
+  text-align: center;
+}
+.domhotel-arealist-link-planlist a {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-right: 2rem;
+  position: relative;
+}
+.domhotel-arealist-link-planlist a:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-arealist-link-planlist a:before {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: .8em;
+  margin-top: -.5em;
+}
+
+.domhotel-arealist-area {
+  margin-top: 4rem;
+}
+
+.domhotel-arealist-pref {
+  margin: 2rem 1rem 0;
+}
+
+.domhotel-arealist-area-ttl {
+  margin-bottom: 1rem;
+}
+.domhotel-arealist-area-ttl a {
+  display: block;
+  border: 1px solid #195178;
+  border-radius: 4px;
+  padding: 1.8rem;
+  font-size: 2.4rem;
+  line-height: 1;
+  font-weight: bold;
+  color: #195178;
+  text-decoration: none;
+  transition: background .2s;
+}
+.domhotel-arealist-area-ttl a:hover {
+  background-color: #fff;
+}
+
+.domhotel-arealist-pref-ttl {
+  margin-bottom: 2rem;
+}
+.domhotel-arealist-pref-ttl a {
+  display: block;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1;
+  font-weight: bold;
+  position: relative;
+  background: #333;
+  padding: 1.2rem 1.8rem;
+  color: #fff;
+  text-decoration: none;
+  transition: opacity .2s;
+}
+.domhotel-arealist-pref-ttl a:before {
+  content: "";
+  border-style: solid;
+  border-width: 8px 8px 0 8px;
+  border-color: #333 transparent transparent transparent;
+  position: absolute;
+  top: 100%;
+  left: 4rem;
+}
+.domhotel-arealist-pref-ttl a:hover {
+  opacity: .8;
+}
+
+.domhotel-arealist-link-map a {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  position: relative;
+}
+.domhotel-arealist-link-map a:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-arealist-link-map a:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -.5em;
+}
+
+.domhotel-arealist-block__item {
+  padding: 2rem 0;
+}
+.domhotel-arealist-block__item:not(:first-child) {
+  padding: 0;
+  visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: all .2s;
+  border-top: 1px solid #d7d7d7;
+}
+.domhotel-arealist-block.is-open .domhotel-arealist-block__item {
+  padding: 2rem 0;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+}
+.domhotel-arealist-block__ttl {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.2;
+  padding-left: 1rem;
+  border-left: 4px solid #cc0d21;
+  margin-bottom: 1rem;
+}
+.domhotel-arealist-block__list {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.domhotel-arealist-block__list > li {
+  margin: .5rem .5rem 0 0;
+}
+.domhotel-arealist-block__list > li a {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #d7d7d7;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: #333;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition: all .2s;
+}
+.domhotel-arealist-block__list > li a:hover {
+  text-decoration: none;
+  color: #195178;
+  border-color: #195178;
+}
+
+.domhotel-arealist-btn-more {
+  margin: 0 0 2rem 0;
+  text-align: center;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.domhotel-arealist-btn-more:hover {
+  opacity: .8;
+}
+.domhotel-arealist-btn-more > span {
+  color: #125687;
+  font-weight: bold;
+  position: relative;
+}
+.domhotel-arealist-btn-more > span:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-arealist-btn-more > span:before {
+  display: inline-block;
+  color: #323743;
+  font-size: 1.2rem;
+  margin-right: .8em;
+  transition: .2s;
+}
+.domhotel-arealist-btn-more.is-open > span:before {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.domhotel-arealist-btn-more span:after {
+  content: "もっと見る";
+}
+.domhotel-arealist-btn-more.is-open {
+  margin-top: 2rem;
+}
+.domhotel-arealist-btn-more.is-open span:after {
+  content: "閉じる";
+}
+
+.domhotel-btn-back-planlist {
+  text-align: center;
+  margin: 2rem 0;
+}
+.domhotel-btn-back-planlist a {
+  display: inline-block;
+  padding: 1rem 0 1rem 3rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  position: relative;
+}
+.domhotel-btn-back-planlist a:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-btn-back-planlist a:before {
+  display: inline-block;
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -.5em;
+}
+
+.domhotel-btn-cv-01,
+a.domhotel-btn-cv-01,
+button.domhotel-btn-cv-01 {
+  display: block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  line-height: 50px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(112deg, #3498db 0, #52c8ff 100%) 0 0 no-repeat;
+  color: #fff;
+  position: relative;
+  transition: .3s;
+  z-index: 2;
+  cursor: pointer;
+}
+.domhotel-btn-cv-01:hover,
+a.domhotel-btn-cv-01:hover,
+button.domhotel-btn-cv-01:hover {
+  border-radius: 3rem;
+}
+.domhotel-btn-cv-01.is-disabled,
+a.domhotel-btn-cv-01.is-disabled,
+button.domhotel-btn-cv-01.is-disabled {
+  pointer-events: none;
+  background: #dcdcdc;
+  color: #999;
+}
+
+.domhotel-btn-cv-02,
+a.domhotel-btn-cv-02,
+button.domhotel-btn-cv-02 {
+  display: block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  line-height: 60px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background: linear-gradient(112deg, #3498db 0, #52c8ff 100%) 0 0 no-repeat;
+  color: #3498db;
+  position: relative;
+  transition: .3s;
+  z-index: 2;
+  cursor: pointer;
+}
+.domhotel-btn-cv-02:before,
+a.domhotel-btn-cv-02:before,
+button.domhotel-btn-cv-02:before {
+  content: "";
+  display: block;
+  background: #fff;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: .3s;
+  z-index: -1;
+}
+.domhotel-btn-cv-02:hover,
+a.domhotel-btn-cv-02:hover,
+button.domhotel-btn-cv-02:hover {
+  border-radius: 3rem;
+}
+.domhotel-btn-cv-02:hover:before,
+a.domhotel-btn-cv-02:hover:before,
+button.domhotel-btn-cv-02:hover:before {
+  border-radius: 3rem;
+}
+.domhotel-btn-cv-02.is-disabled,
+a.domhotel-btn-cv-02.is-disabled,
+button.domhotel-btn-cv-02.is-disabled {
+  pointer-events: none;
+  background: #dcdcdc;
+  color: #999;
+}
+.domhotel-btn-cv-02.is-disabled:before,
+a.domhotel-btn-cv-02.is-disabled:before,
+button.domhotel-btn-cv-02.is-disabled:before {
+  background: #f5f5f5;
+}
+
+@font-face {
+  font-family: 'jtb-dom';
+  src: url("../fonts/jtb-dom-v2.ttf") format("truetype"), url("../fonts/jtb-dom-v2.woff") format("woff"), url("../fonts/jtb-dom-v2.svg#jtb-dom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'kkrs-dp';
+  src: url("../fonts/kkrs-dp.ttf") format("truetype"), url("../fonts/kkrs-dp.woff") format("woff"), url("../fonts/kkrs-dp.svg#kkrs-dp") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* 人数・室数パネル 修正20191101
+---------------------------------------------------------- */
+.dom-spinbox--room {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.dom-spinbox__label {
+  font-weight: bold;
+  position: relative;
+  padding-left: 2.4rem;
+}
+.dom-spinbox__label:before {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -.5em;
+  color: #999;
+}
+.dom-spinbox__label small {
+  font-weight: normal;
+}
+.dom-spinbox__label--room:before {
+  content: "";
+}
+.dom-spinbox__label--men:before {
+  content: "";
+  font-size: 2rem;
+  margin-left: -.3rem;
+}
+.dom-spinbox__label--women:before {
+  content: "";
+  font-size: 2rem;
+  margin-left: -.3rem;
+}
+.dom-spinbox__label--room:before {
+  content: "";
+}
+
+.domhotel-room-child__trigger {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-left: 2.4rem;
+  position: relative;
+  color: #125687;
+}
+.domhotel-room-child__trigger:before, .domhotel-room-child__trigger:after {
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -.5em;
+}
+.domhotel-room-child__trigger:before {
+  content: "";
+  color: #ddd;
+  margin-left: -.3rem;
+}
+.domhotel-room-child__trigger:after {
+  content: "";
+  color: #999;
+  margin-left: .3rem;
+}
+.domhotel-room-child__trigger span {
+  display: inline-block;
+  padding-right: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+.domhotel-room-child__trigger span:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -.5em;
+  font-size: .8em;
+  transition: .2s;
+}
+.domhotel-room-child__trigger.is-open {
+  margin-bottom: 2rem;
+}
+.domhotel-room-child__trigger.is-open span:before {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+.domhotel-room-child__content {
+  display: none;
+}
+.domhotel-room-child-link a {
+  display: inline-block;
+  position: relative;
+}
+.domhotel-room-child-link a:before {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 9px;
+  background: url(../../../assets/images/dom/1.0/ico-window.png) no-repeat 0 0;
+  background-size: 11px auto;
+  margin-right: 5px;
+}
+
+.domhotel-room-total__content {
+  border-top: 1px solid #d7d7d7;
+  padding: 1rem 0 0;
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.domhotel-room-total__content em {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 .2em;
+}
+.domhotel-room-total-count {
+  color: #cc0d21;
+}
+
+/* キャンペーンリンク付アイコン */
+.domhotel-ico-campaign {
+  display: inline-block;
+  border: 1px solid #125687;
+  color: #125687;
+  font-size: 1.1rem;
+  line-height: 21px;
+  font-weight: normal;
+  padding: 0 18px 0 5px;
+  position: relative;
+  position: relative;
+}
+.domhotel-ico-campaign:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-ico-campaign:hover {
+  opacity: .8;
+}
+.domhotel-ico-campaign:before {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  font-size: 1rem;
+  margin-top: -.5em;
+}
+.domhotel-ico-campaign:hover {
+  text-decoration: none;
+}
+
+.dom-plan-details__room-type .domhotel-ico-campaign {
+  margin-left: .5em;
+  vertical-align: middle;
+}
+
+.domhotel-plan-details .domhotel-plan-ico-list {
+  margin-bottom: 1rem;
+}
+
+/* guide
+---------------------------------------------------------- */
+.domhotel-guide-section {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 25px 20px;
+}
+
+.domhotel-guide-block {
+  margin-top: 40px;
+}
+.domhotel-guide-block__item {
+  margin-top: 25px;
+}
+
+.domhotel-guide-heading-01 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+
+.domhotel-guide-heading-02 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+
+.domhotel-guide-heading-03 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 1.2;
+  margin-bottom: .5em;
+}
+
+.domhotel-guide-note {
+  margin-top: .5em;
+  font-size: 1.2rem;
+}
+
+.domhotel-guide-tbl-01 {
+  width: 100%;
+}
+.domhotel-guide-tbl-01 th,
+.domhotel-guide-tbl-01 td {
+  border: 1px solid #d7d7d7;
+  padding: 1em;
+}
+.domhotel-guide-tbl-01 th {
+  background-color: #f5f5f5;
+  width: 10em;
+}
+
+.domhotel-guide-tbl-02 {
+  width: 100%;
+}
+.domhotel-guide-tbl-02 th,
+.domhotel-guide-tbl-02 td {
+  border: 1px solid #d7d7d7;
+  padding: 1em;
+}
+.domhotel-guide-tbl-02 th {
+  text-align: center;
+  width: 7%;
+  font-family: sans-serif;
+}
+.domhotel-guide-tbl-02 td {
+  width: 43%;
+}
+
+/* faq
+---------------------------------------------------------- */
+.domhotel-faq-section {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 25px 20px;
+}
+
+.domhotel-faq-heading-01 {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1em;
+}
+
+.domhotel-faq-list {
+  border-top: 1px solid #d7d7d7;
+}
+
+.domhotel-faq-item {
+  border-bottom: 1px solid #d7d7d7;
+}
+.domhotel-faq-item__question {
+  padding: 10px 45px 10px 5px;
+  font-size: 1.6rem;
+  transition: opacity .2s;
+  cursor: pointer;
+  position: relative;
+}
+.domhotel-faq-item__question:before {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.domhotel-faq-item__question:before {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  margin-top: -.5em;
+  font-size: 1.2rem;
+  transition: all .2s;
+}
+.domhotel-faq-item__question:hover {
+  opacity: .8;
+}
+.domhotel-faq-item__question.is-open:before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.domhotel-faq-item__answer {
+  display: none;
+  padding: 5px 15px 15px;
+}
+
+/* tourism (外部ファイルより取得)
+---------------------------------------------------------- */
+.dom-tourism {
+  border-bottom: solid 1px #d7d7d7;
+}
+
+.dom-tourism .dom-section-heading-01 {
+  position: relative;
+  cursor: pointer;
+  margin: 0;
+  padding: 15px 0 15px 25px;
+}
+
+.dom-tourism .dom-section-heading-01:hover {
+  opacity: .8;
+}
+
+.dom-tourism .dom-section-heading-01:before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  display: block;
+  color: #cc0d21;
+  margin-top: -.5em;
+  font-size: 1.6rem;
+  transition: all 0.2s ease 0s;
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "\e906";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dom-tourism .dom-section-heading-01.js-open:before {
+  content: "\e971";
+}
+
+.dom-tourism-wrap {
+  display: none;
+  padding-bottom: 30px;
+}
+
+.dom-tourism-wrap-open {
+  display: block;
+  padding-bottom: 30px;
+}
+
+.dom-tourism-section:not(:first-child) {
+  margin-top: 30px;
+}
+
+/* clearfix */
+.dom-tourism-qa-wrap:after,
+.dom-tourism-spot-section:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.dom-tourism-qa-wrap,
+.dom-tourism-spot-section {
+  display: inline-block;
+  min-height: 1%;
+  /* for IE 7*/
+}
+
+/* Hides from IE-mac \*/
+* html .dom-tourism-qa-wrap,
+* html .dom-tourism-spot-section {
+  height: 1%;
+}
+
+.dom-tourism-qa-wrap,
+.dom-tourism-spot-section {
+  display: block;
+}
+
+/* End hide from IE-mac */
+.dom-tourism-qa figure {
+  float: right;
+  margin-left: 20px;
+  width: 260px;
+}
+
+.dom-tourism-qa figure img {
+  width: 100%;
+  height: auto;
+}
+
+.dom-tourism-qa figcaption {
+  margin-top: 5px;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #999;
+}
+
+.dom-tourism-spot-section {
+  margin-top: 30px;
+}
+
+.dom-tourism-spot-section figure {
+  float: left;
+  margin-right: 20px;
+  width: 260px;
+}
+
+.dom-tourism-spot-section figure img {
+  width: 100%;
+  height: auto;
+}
+
+.dom-tourism-spot-section figcaption {
+  margin-top: 5px;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #999;
+}
+
+.dom-tourism-spot-section h4 {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.dom-tourism-spot-section > figure + h4,
+.dom-tourism-spot-section > figure + h4 + p,
+.dom-tourism-spot-section > figure + h4 + p + ul {
+  margin-left: 280px;
+}
+
+.dom-tourism-spot-list {
+  margin-top: 20px;
+}
+
+.dom-tourism-spot-list li {
+  position: relative;
+  padding-left: 15px;
+}
+
+.dom-tourism-spot-list li:before {
+  position: absolute;
+  left: 0;
+  content: "・";
+}
+
+.dom-tourism-kome {
+  margin-top: 20px;
+}
+
+.dom-tourism-kome li {
+  position: relative;
+  padding-left: 15px;
+}
+
+.dom-tourism-kome li:before {
+  position: absolute;
+  left: 0;
+  content: "※";
+}
+
+/* tourism
+---------------------------------------------------------- */
+.domhotel-tourism-qa-heading {
+  position: relative;
+  padding-left: 4rem;
+  padding-top: .5rem;
+  min-height: 3rem;
+  margin-bottom: 1.5rem;
+}
+.domhotel-tourism-qa-heading:after {
+  content: "Q";
+  display: inline-block;
+  background: #4bb6e8;
+  color: #fff;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  font-weight: normal;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.domhotel-tourism-qa-wrap {
+  padding-left: 4rem;
+  position: relative;
+}
+.domhotel-tourism-qa-wrap:before {
+  content: "A";
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #4bb6e8;
+  color: #4bb6e8;
+  width: 3rem;
+  height: 3rem;
+  line-height: 2.8rem;
+  font-weight: normal;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* error表示
+---------------------------------------------------------- */
+.domhotel-error {
+  background: #fbedef;
+  padding: 1.2rem 1.2rem 1.2rem 4rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  position: relative;
+}
+.domhotel-error:before {
+  content: "";
+  background: url(../images/ico-error.svg) no-repeat center center;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+}
+
+.domhotel-warning {
+  background: #fef6f0;
+  padding: 1.2rem 1.2rem 1.2rem 4rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+  position: relative;
+}
+.domhotel-warning:before {
+  content: "";
+  background: url(../images/ico-warning.svg) no-repeat center center;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 1.2rem;
+  left: 1.2rem;
+}

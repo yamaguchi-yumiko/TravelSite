@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'Noto Sans JP';
+	font-weight: 100;
+	src: url('/kokunai/___common/fonts/NotoSansJP-Thin.otf') format("opentype");
+	font-display: block;
+}
+@font-face {
+	font-family: 'Noto Sans JP';
+	font-weight: 300;
+	src: url('/kokunai/___common/fonts/NotoSansJP-Light.otf') format("opentype");
+	font-display: block;
+}
+@font-face {
+	font-family: 'Noto Sans JP';
+	font-weight: 400;
+	src: url('/kokunai/___common/fonts/NotoSansJP-Regular.otf') format("opentype");
+	font-display: block;
+}
+@font-face {
+	font-family: 'Noto Sans JP';
+	font-weight: 500;
+	src: url('/kokunai/___common/fonts/NotoSansJP-Medium.otf') format("opentype");
+	font-display: block;
+}
+@font-face {
+	font-family: 'Noto Sans JP';
+	font-weight: 700;
+	src: url('/kokunai/___common/fonts/NotoSansJP-Bold.otf') format("opentype");
+	font-display: block;
+}
+@font-face {
+	font-family: 'Noto Sans JP';
+	font-weight: 900;
+	src: url('/kokunai/___common/fonts/NotoSansJP-Black.otf') format("opentype");
+	font-display: block;
+}
+@font-face {
+	font-family: 'Work Sans';
+	font-weight: 400;
+	src: url('/kokunai/___common/fonts/WorkSans-Regular.ttf') format("truetype");
+	font-display: block;
+}
+@font-face {
+	font-family: 'Work Sans';
+	font-weight: 500;
+	src: url('/kokunai/___common/fonts/WorkSans-Medium.ttf') format("truetype");
+	font-display: block;
+}
+@font-face {
+	font-family: 'Work Sans';
+	font-weight: 700;
+	src: url('/kokunai/___common/fonts/WorkSans-Bold.ttf') format("truetype");
+	font-display: block;
+}
+@font-face {
+	font-family: 'Work Sans';
+	font-weight: 900;
+	src: url('/kokunai/___common/fonts/WorkSans-Black.ttf') format("truetype");
+	font-display: block;
+}
+
+@font-face{
+	font-family:'kkrs-dp';
+	src:url("/kokunai/___common/fonts/kkrs-dp.ttf") format("truetype"),url("/kokunai/___common/fonts/kkrs-dp.woff") format("woff"),url("/kokunai/___common/fonts/kkrs-dp.svg#kkrs-dp") format("svg");
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face {
+  font-family: 'jtb-dom';
+  src: url("/kokunai/_common/fonts/jtb-dom.ttf") format("truetype"), url("/kokunai/_common/fonts/jtb-dom.woff") format("woff"), url("/kokunai/_common/fonts/jtb-dom.svg#jtb-dom") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
