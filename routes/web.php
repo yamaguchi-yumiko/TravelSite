@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,9 @@ use Illuminate\Http\Request;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::get('/index.html', [PostController::class, 'index']);
+
+Route::get('/kokunai_hotel', [PostController::class, 'kokunai_hotel']);
 
 Auth::routes();
 
