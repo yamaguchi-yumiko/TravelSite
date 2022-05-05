@@ -135,6 +135,7 @@ class ReserveController extends Controller
         'emergency_contact_second',
         'emergency_contact_third',
         'next_email',
+        'email_conf',
         'first_name',
         'last_name',
         'kiyaku',
@@ -148,34 +149,6 @@ class ReserveController extends Controller
      **/
     public function show(Request $request)
     {
-        //取得イメージ
-
-        // 画面遷移時にPOST送信 session保存に使用
-        // <input type="hidden" name="products_id" value="'$product['id']"> 客室情報
-        // <input type="hidden" name="" value="'$user['id']"> ログインユーザ情報
-        //$gestsの中身
-
-
-        //客室情報から情報を取得
-
-        // $roomData = [
-        //     'session_products_id' => 'products_id',客室情報
-        //     'session_gests' => 'product_gests',宿泊者情報
-        // ];
-
-        //渡されたセッション情報をkey（名前）を用いそれぞれ取得、変数に代入
-        // $sessionUser = User::find($request->session()->get('users_id'));
-
-        //roomDataの存在チェック
-        // if($request->has('roomData')){
-        //   //客室情報と予約条件を配列で取得 客室情報から$request->session()->pushされてくる？ $request->session()->push('roomData', $roomData);
-        //   $roomData = array_values($request->session()->get('roomData'));
-        // };
-
-        // if(!emputy($roomData)){
-        //     $sessionProductsId = array_column($roomData, 'session_products_id'); //客室情報からユーザIDを取得
-
-        // }
 
         $total = 0;
         foreach ($this->gests as $gest) {
@@ -228,60 +201,19 @@ class ReserveController extends Controller
                 'emergency_contact_first' => ['nullable', 'numeric', 'regex:/^0\d/'],
                 'emergency_contact_second' => ['nullable', 'numeric', 'regex:/\d{0,4}/'],
                 'emergency_contact_third' => ['nullable', 'numeric', 'regex:/\d{0,4}/'],
-                'next_email' => ['max:255', new Uppercase],
-                'email_conf' => 'same:email',
+                'next_email' => ['max:255', 'email'],
+                'email_conf' => 'same:next_email',
                 'first_name.*' => ['required', 'regex:/^[ぁ-んァ-ヶ一-龥々]+$/u'],
                 'last_name.*' => ['required', 'regex:/^[ぁ-んァ-ヶ一-龥々]+$/u'],
-                'kiyaku' => ['accepted'],
+                'kiyaku' => ['required', 'accepted'],
             ],
-            [
-                'check_time.required' => 'チェックイン時間はお間違いのないようご入力ください。',
-                'postal_code_first.required' => '郵便番号はお間違いのないようご入力ください。',
-                'postal_code_first.digits' => '郵便番号の入力に誤りがあります。',
-                'postal_code_first.integer' => '郵便番号の入力に誤りがあります。',
-                'postal_code_second.required' => '郵便番号はお間違いのないようご入力ください。',
-                'postal_code_second.digits' => '郵便番号の入力に誤りがあります。',
-                'postal_code_second.integer' => '郵便番号の入力に誤りがあります。',
-                'address_prefectures.required' => '住所はお間違いのないようご入力ください。',
-                'address_cities.required' => '住所はお間違いのないようご入力ください。',
-                'address_town.required' => '住所はお間違いのないようご入力ください。',
-                'tel_first.required' => '電話番号はお間違いのないようご入力ください。',
-                'tel_first.numeric' => '電話番号の入力に誤りがあります。',
-                'tel_first.regex' => '電話番号の入力に誤りがあります。',
-                'tel_second.required' => '電話番号はお間違いのないようご入力ください。',
-                'tel_second.numeric' => '電話番号の入力に誤りがあります。',
-                'tel_second.regex' => '電話番号の入力に誤りがあります。',
-                'tel_third.required' => '電話番号はお間違いのないようご入力ください。',
-                'tel_third.numeric' => '電話番号の入力に誤りがあります。',
-                'tel_third.regex' => '電話番号の入力に誤りがあります。',
-                'emergency_contact_first.numeric' => '電話番号の入力に誤りがあります。',
-                'emergency_contact_first.regex' => '電話番号の入力に誤りがあります。',
-                'emergency_contact_second.numeric' => '電話番号の入力に誤りがあります。',
-                'emergency_contact_second.regex' => '電話番号の入力に誤りがあります。',
-                'emergency_contact_third.numeric' => '電話番号の入力に誤りがあります。',
-                'emergency_contact_third.regex' => '電話番号の入力に誤りがあります。',
-                'next_email.required' => 'メールアドレスはお間違いのないようご入力ください。',
-                'email_conf.same' => '2つのメールアドレスが異なります',
-                'first_name.*.required' => '代表者氏名（漢字）はお間違いのないようご入力ください。',
-                'last_name.*.required' => '代表者氏名（漢字）はお間違いのないようご入力ください。',
-                'first_name.*.regex' => '代表者氏名（漢字）はお間違いのないようご入力ください。',
-                'last_name.*.regex' => '代表者氏名（漢字）はお間違いのないようご入力ください。',
-                'kiyaku.accepted' => '「個人情報の取り扱いに同意します」にチェックが入っていません',
-            ]
         );
 
         // バリデーションの正否
-        if ($validator->fails()) {
-            // バリデーションが失敗したなら
-            return redirect()->action([ReserveController::class, 'show'])
-                ->withInput() // 送信されたフォームの値をInput::old()へ引き継ぐ
-                ->withErrors($validator); // Validatorインスタンスの値を$errorsへ保存
-        }
-
+        $validator->validate();
         $request->session()->put('reserve_input', $input);
         return redirect()->action([ReserveController::class, 'confirm']);
     }
-
 
     /**
      * 確認処理
@@ -294,7 +226,6 @@ class ReserveController extends Controller
     {
         // セッションから値を取り出す
         $input = $request->session()->get('reserve_input');
-
         // セッションに値が無い時はフォームに戻る
         if (!$input) {
             return redirect()->action([ReserveController::class, 'show']);
@@ -323,7 +254,7 @@ class ReserveController extends Controller
         // forgetでセッション変数を空にする
         $request->session()->forget('reserve_input');
 
-        return redirect()->action([ReserveController::class, 'donw']);
+        return redirect()->action([ReserveController::class, 'done']);
     }
 
     /**

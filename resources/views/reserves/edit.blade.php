@@ -16,7 +16,6 @@
     <div class="reserve_content">
         <div class="reserve_desc">
             <h1>予約・購入情報入力</h1>
-            {{$errors}}
             @if($errors->has('kiyaku'))
             <p class="error">{{$errors->first('kiyaku')}}</p>
             @endif
@@ -348,13 +347,11 @@
                                 @endif
                                 <p class="wrong_transmission">誤送信を防ぐために、もう一度同じメールアドレスを入力してください。</p>
                                 <p class="wrong_transmission_input">
-                                    <input type="text" name="email_conf" @focus="emailConfFocus" :class="!isEmailConf ? emailConfClass : 'on_check'" value="{{old('email_conf')}}" :disabled="email != 'next'">
+                                    <input type="text" name="email_conf" value="{{old('email_conf')}}" @focus="emailConfFocus" :class="!isEmailConf ? emailConfClass : 'on_check'" :disabled="email != 'next'">
                                 </p>
-                                <p class="error">
-                                    @if($errors->has('email_conf'))
-                                    {{$errors->first('email_conf')}}
-                                    @endif
-                                </p>
+                                @if($errors->has('email_conf'))
+                                <p class="error">{{$errors->first('email_conf')}}</p>
+                                @endif
                             </td>
                             <td class="help_inner">
                                 <p :class="emailClass === 'checkError' || emailConfClass === 'checkError' ? 'checkInfo' : ''">例） 123abcde@jtb.co.jp</p>
@@ -376,7 +373,6 @@
                         </tr>
                         @empty(!$gest)
                         @foreach($gest as $index => $gest)
-                        {{$index}}
                         <tr class="delegate">
                             @if($gest['room'] === 1)
                             <td>部屋1&nbsp;代表者氏名（漢字）<br></td>
