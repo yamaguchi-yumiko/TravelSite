@@ -1,0 +1,301 @@
+/*
+ * 高瀬さん作成CSS: dom-common-pc.cssに対して、forciaが開発時に追加したCSS
+ * TODO: CSSの名称確認、最終的にCSSを統合すべきかどうかの判断
+ */
+ .spk_approach-checked,
+ .spk_suggest-highlight {
+	 background-color: #fae5e5;
+}
+
+.spk_css_room-assign-error {
+	margin-top: 15px;
+	margin-bottom: -15px
+}
+
+/*
+ .spk_css_calendar-godate-selected {
+	background-color: #e57f7f;
+	color: #fff;
+	border-width: 1px 0 1px 1px !important;
+	position: relative;
+}
+*/
+
+ /* デザインのCSSを打ち消す */
+ .dom-suggest-list .dom-suggest-list__item:hover {
+	 background-color: white;
+ }
+ .dom-search__panel .dom-suggest-list .spk_css_suggest-highlight {
+	 background-color: #fae5e5;
+ }
+ .spk_css_flight-loading {
+	 text-align: center;
+ }
+
+ /* slick を使った画像表示の場合に、初期化以前だと縦並びに表示される問題の修正*/
+.js-domhotel-hotel-slider{
+	display: none;
+}
+
+.js-domhotel-hotel-slider.slick-initialized{
+	 display: block; /*slick-initializedが付与されたら表示*/
+}
+
+/* るるぶトラベル プランアイコン */
+.dom-ico-rurubu-plan {
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.domhotel-area-map__label:not(.is-active) {
+	background-color: #CCCCCC
+}
+
+/* SP でも重要なお知らせを使いたい */
+/* 重要なお知らせ */
+.dom-warnings-02 {
+	background-color: #fae5e5;
+}
+.dom-warnings-02__in {
+	max-width: 1130px;
+	padding: 15px 5px;
+	margin: 0 auto;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+}
+.dom-warnings-02__ttl {
+	color: #cc0d21;
+}
+.dom-warnings-02__ttl span {
+	position: relative;
+}
+.dom-warnings-02__ttl span:before {
+	font-family: 'jtb-dom' !important;
+	text-decoration: none;
+	content: "";
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.dom-warnings-02__ttl span:before {
+	font-size: 1.5rem;
+	margin-right: .3em;
+}
+.dom-warnings-02__contents {
+	padding-left: 2em;
+}
+.spk_css_usj-header {
+	border-bottom: 1px solid #e0e0e0;
+	height: 60px;
+	padding-left: 10px;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-align-items: center;
+	align-items: center;
+	background-color: white;
+}
+.spk_css_usj-header img {
+	width: 110px;
+}
+
+.spk_css_dp-cross-link {
+	height: 61px;
+}
+
+.spk_css_room-assign-detail-note {
+	display: inline-block;
+	border: 1px solid #999;
+	padding: 6px 10px;
+}
+
+/* disabled 非活性ボタン */
+[class*="dom__btn-"].is-disabled {
+  background-color: #dcdcdc;
+  color: #999;
+  border-color: #ccc;
+  cursor: default;
+}
+[class*="dom__btn-"].is-disabled:hover {
+  opacity: 1;
+}
+
+/* 商材TOPを WebManager 入稿にする */
+/* メインビジュアル */
+.domhotel-top-mv {
+	background: url(/kokunai_hotel/web-manager-image/pc/yado_top_photo/bg-mv-01.jpg) no-repeat center top;
+  background-size: 1920px auto;
+}
+
+/* 特集 メインビジュアル */
+.domhotel-planlist-mv {
+	background: url(/kokunai_hotel/web-manager-image/pc/yado_ty_top_photo/bg-mv-planlist-01.jpg) no-repeat center center;
+	background-size: cover;
+	margin-bottom: 40px;
+}
+
+/* powerd by FORCIAを隠す */
+.spk_hide-powered-by #spk_powered-by {
+	display: none;
+}
+
+.spk_css_header-usj {
+	margin: 0 auto;
+	max-width: 1130px;
+	padding: 10px 5px;
+	height: auto;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+}
+.spk_css_header-usj .dom-header__logo-jtb img {
+	height: 44px;
+}
+.spk_css_header-usj .dom-header__logo-usj img {
+	height: 57px;
+}
+.spk_css_room-assign-warning {
+	padding: 10px;
+}
+
+.spk_css_heading_note {
+	font-size: 1.4rem;
+	font-weight: bold;
+	line-height: 1.2;
+	margin-top: -20px;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+/* 地図 */
+.gm-bundled-control-on-bottom button img { display: none !important; }
+.gm-bundled-control-on-bottom button[title="ズームイン"] { background: url("/kokunai_hotel/assets/images/dom/1.0/ico-map-plus.svg") !important;}
+.gm-bundled-control-on-bottom button[title="ズームアウト"] { background: url("/kokunai_hotel/assets/images/dom/1.0/ico-map-minus.svg") !important;}
+
+/* JTBMAINT-1457 PC 地図の位置調整*/
+.domhotel-map {
+  top: 0px;
+	left: 0px;
+}
+
+/* JTBMAINT-1505 【国内宿泊】施設一覧(PC/SP) キャンペーンアイコンの表示デザイン微調整 */
+div.dom-hotel-details__ico-list-01
+{
+	display:flex;
+}
+div.first-box
+{
+	width: 61%;
+}
+div.first-box a.domhotel-ico-campaign
+{
+	margin: 0.25rem;
+}
+div.second-box div.dom-favorite-btn-wrap.js-dom-favorite
+{
+	margin:0.25rem;
+}
+div.first-box .dom-ico-jtb-recommend /* JTBのおすすめもキャンペーンアイコンと同じく0.25マージンを取る */
+{
+	margin:0.25rem;
+}
+
+.spk_domhotel-guide-note-1 {
+	padding-top: 1rem;
+}
+
+/* JTBMAINT-1609 【国内宿】プラン一覧に感染症対策のお知らせを書き出したい */
+section.domhotel-covid_19_info-section
+{
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 25px 20px;
+}
+
+/* JTBMAINT-1609 【国内宿】プラン一覧に感染症対策のお知らせを書き出したい */
+h2.domhotel-covid_19_info-heading-01
+{
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1em;
+}
+
+p.domhotel-covid_19_info-text1
+{
+    margin-bottom: 1.5rem;
+}
+
+div.domhotel-covid_19_info-position
+{
+    width:90vh;
+}
+
+section.domhotel-covid_19_info-block
+{
+    margin-bottom: 25px;
+}
+
+h3.domhotel-covid_19_info-heading-02
+{
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+ul.domhotel-covid_19_info-list
+{
+    columns: 2;
+}
+
+li.domhotel-covid_19_info-list_child
+{
+		color: #000;
+    margin-bottom: 3px;
+}
+
+li.domhotel-covid_19_info-list_child:before
+{
+		font-family: 'jtb-dom' !important;
+		content: "";
+    color: #cc0d21;
+    margin: 0px 0.6em 0px 0px;
+}
+
+/* JTBMAINT-1609 */
+.spk_corona-area > a:after {
+  font-family: 'jtb-dom' !important;
+  text-decoration: none;
+  content: "";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+li.domhotel-covid_19_info-list_child {
+	position: relative;
+	padding-left: 2rem;
+}
+li.domhotel-covid_19_info-list_child::before {
+	position: absolute;
+	left: 0;
+	margin: 0;
+}

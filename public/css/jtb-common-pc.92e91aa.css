@@ -1,0 +1,628 @@
+@charset "UTF-8";
+/* v1.03 2016/11/22 */
+/* ==========================================================
+ html5 elements
+========================================================== */
+article, aside, figure, figcaption, footer, header, nav, section, main
+{ display: block;}
+/* ==========================================================
+ reseting
+========================================================== */
+html {
+ font-size: 62.5%;
+}
+body {
+	line-height: 1.7;
+	color: #333;
+	font-size: 1.4rem;
+	-webkit-text-size-adjust: 100%;
+	background-color: #f7f7f7;
+}
+body, input, textarea, select, button {
+	font-family: Helvetica, Arial, Verdana,"メイリオ","ヒラギノ角ゴPro W3","Hiragino Kaku Gothic Pro",Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	/* 明朝フォント
+	font-family: "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "游明朝体", "Yu Mincho", YuMincho, serif;*/
+}
+body, div, pre, p, blockquote, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, th, td, button, figure, figcaption
+{ margin: 0; padding: 0;}
+input, textarea
+{ margin: 0; font-size:1.4rem !important;}
+input, textarea, select
+{ /*-webkit-appearance: none;*/}
+input:focus, textarea:focus, select:focus
+{ outline: none; }
+/*IE11*/
+input::-ms-clear {
+    visibility:hidden
+}
+select::-ms-expand
+{ display: none; }
+textarea
+{ resize: none;}
+
+button
+{ border: none; overflow: visible; background: none; vertical-align: top;color: inherit; cursor: pointer; -webkit-appearance: none;}
+label
+{ cursor: pointer;}
+table
+{ border-collapse: collapse; border-spacing: 0;}
+fieldset, img
+{ border: 0;}
+img
+{ height: auto; vertical-align: top;}
+address, caption, code, em, th
+{ font-style: normal; font-weight: normal;}
+ol, ul
+{ list-style: none;}
+caption, th
+{ text-align: left;}
+h1, h2, h3, h4, h5, h6, strong, em
+{ font-weight: normal;}
+a, input
+{/* outline: none; -webkit-tap-highlight-color:rgba(0,0,0,0);*/}
+sup
+{ vertical-align: top;}
+sub
+{ vertical-align: baseline;}
+*
+{ box-sizing: border-box; -webkit-box-sizing: border-box;}
+/* ==========================================================
+ base Link
+========================================================== */
+a {
+	color: #333;
+	text-decoration: none;
+}
+a:visited {}
+a:hover,
+a:active,
+a:focus { text-decoration: underline;}
+/* ==========================================================
+ clearfix
+========================================================== */
+.clearfix:before, .clearfix:after,
+.contents:before, .contents:after
+{
+	content: "";
+
+}
+.clearfix:after,
+.contents:after
+{
+	clear: both;
+}
+/* For IE 6/7
+---------------------------------------------------------- */
+.clearfix,
+.contents
+{
+	*zoom: 1;
+}
+
+/* ==========================================================
+ layout
+========================================================== */
+html { overflow-y: scroll; }
+
+/* ==========================================================
+ header
+========================================================== */
+.jtb-header {
+	width: 100%;
+	background-color: #fff;
+}
+.jtb-header--absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.max-width-02 {
+    max-width: 1096px;
+    margin: 0px auto;
+    padding: 0px 5px;
+}
+/* header-top
+---------------------------------------------------------- */
+	.jtb-header-top {
+		padding: 7px 0;
+		border-top: 4px solid #c41a2b;
+		border-bottom: 1px solid #d7d7d7;
+	}
+		.jtb-header-top__in {
+			overflow: hidden;
+			padding: 7px 13px 7px 18px;
+			margin: 0 auto;
+			position:relative;
+		}
+	.jtb-header-top__area-01 {
+		float: left;
+		overflow: hidden;
+	}
+	.jtb-header-top__area-02 {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: flex;
+		flex-flow: row wrap;
+        justify-content: flex-end;
+        -webkit-justify-content: flex-end;
+	}
+		.jtb-header-top__logo { float: left; }
+		.jtb-header-top__h1 {
+			position:absolute;
+			left:220px;
+			top:10px;
+			z-index:100;
+			font-size:1.1rem;
+			}
+			.jtb-header-top__logo-link { display: block; }
+		.jtb-header-top__select-box {
+			position: relative;
+			float: left;
+			width: 96px;
+			height: 14px;
+			margin: 12px 0 0 25px;
+		}
+		.jtb-header-top__select-text {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			font-weight: bold;
+			font-size: 1.3rem;
+			text-align: left;
+			line-height: 1;
+		}
+			.jtb-header-top__select-text:before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: 0;
+				z-index: 0;
+				width: 13px;
+				height: 9px;
+				margin-top: -5px;
+				background: url(../../../images/ovsfit/1.0/ico-select-pc.png) right center no-repeat;
+				background-size: 13px 9px;
+			}
+			.jtb-header-top__select-input {
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				width: 100%;
+				border: none;
+				font-weight: bold;
+				font-size: 1.3rem;
+				text-align: left;
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+			}
+
+		.jtb-header-top__log {
+			float: left;
+			padding-top: 4px;
+			margin-right: 20px;
+			font-size: 1.1rem;
+			font-weight: bold;
+			color: #666;
+		}
+			.jtb-header-top__log-label { display: block; }
+				.jtb-header-top__log-name { margin-left: 10px; }
+			.jtb-header-top__log-point {
+				display: block;
+				padding-left: 24px;
+				background: url(../../../images/ovsfit/1.0/bg-point.svg) left center no-repeat;
+				background-size: 18px 18px;
+			}
+		.jtb-header-top__menu {
+			float: left;
+			padding-top: 12px;
+		}
+			.jtb-nav-top-menu__list { overflow: hidden; }
+				.jtb-nav-top-menu__item {
+					float: left;
+					border-left: 1px solid #e0e0e0;
+				}
+				.jtb-nav-top-menu__item:last-child { border-right: 1px solid #e0e0e0; }
+					.jtb-nav-top-menu__link {
+						display: block;
+						padding: 0 6px;
+						font-size: 1.2rem;
+						font-weight: bold;
+						text-align: center;
+						line-height: 1.2;
+					}
+/* header-bottom
+---------------------------------------------------------- */
+.jtb-header-bottom {
+	padding: 8px 0;
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid #d7d7d7;
+}
+	.jtb-header-bottom__in {
+		/*width: 1130px;*/
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		padding: 7px 13px 7px 18px;
+		margin: 0 auto;
+	}
+		.jtb-nav-bottom-menu__list {
+			overflow: hidden;
+			margin-left: -8px;
+		}
+			.jtb-nav-bottom-menu__item { float: left; }
+			.jtb-nav-bottom-menu__item--variation-01:not(:first-child) { border-left: 1px solid #e0e0e0; }
+
+			.jtb-nav-bottom-menu__item--variation-02 { margin-right: 12px; }
+			.jtb-nav-bottom-menu__item--variation-02:last-child { margin-right: 0; }
+				.jtb-nav-bottom-menu__link {
+					display: block;
+					font-size: 1.2rem;
+					font-weight: bold;
+					color: #000;
+					line-height: 22px;
+				}
+				.jtb-nav-bottom-menu__link:hover {
+					color: #c41a2b;
+					text-decoration: none;
+				}
+				.jtb-nav-bottom-menu__link--variation-01 { padding: 0 8px; }
+				.jtb-nav-bottom-menu__link--variation-02 {
+					padding-left: 18px;
+					background: url(../../../images/ovsfit/1.0/ico-arrowLink-pc.svg) 0 center no-repeat;
+					background-size: 8px 12px;
+				}
+                .jtb-nav-bottom-menu__link02 {
+					display: block;
+					font-size: 1.2rem;
+					font-weight: bold;
+					color: #c41a2b;
+					line-height: 22px;
+				}
+				.jtb-nav-bottom-menu__link02:hover {
+					color: #c41a2b;
+					text-decoration: none;
+				}
+
+
+/* ==========================================================
+ jtb-nav-breadcrumb
+========================================================== */
+.jtb-nav-breadcrumb { margin: 1px auto 30px; }
+	.jtb-nav-breadcrumb__list {
+		overflow: hidden;
+		padding-left: 18px;
+	}
+		.jtb-nav-breadcrumb__item {
+			position: relative;
+			display: inline-block;
+			margin-left: 14px;
+			font-size: 1.3rem !important;
+			color: #999;
+			line-height: 2.1;
+		}
+		.jtb-nav-breadcrumb__item:first-child { margin-left: 0; }
+		.jtb-nav-breadcrumb__item:before {
+			position: absolute;
+			top: 0;
+			right: -10px;
+			font-size: 1.1rem;
+			color: #999;
+			line-height: 2.1;
+			content: ">";
+		}
+		.jtb-nav-breadcrumb__item:last-child:before { display: none; }
+			.jtb-nav-breadcrumb__link {
+				display: inline-block;
+				color: #195178;
+				line-height: 2.1;
+			}
+			.jtb-nav-breadcrumb__item-txt-under {
+				display: table;
+				margin: -2px 0 0;
+				line-height: 1;
+			}
+
+/* ==========================================================
+ footer
+========================================================== */
+.jtb-footer {
+	width: 100%;
+	padding: 10px 0;
+	background-color: #fff;
+}
+	.jtb-footer-in { margin: 0 auto; }
+		.jtb-footer-in__ttl {
+			padding-left: 14px;
+			margin-bottom: 60px;
+			font-size: 1.3rem;
+			font-weight: bold;
+			color: #000;
+			line-height: 1.5;
+		}
+		.jtb-footer-menu {
+			overflow: hidden;
+			padding-left: 25px;
+			margin-bottom: 36px;
+		}
+			.jtb-footer-menu__item {
+				display: inline-block;
+				padding-right: 7px;
+				border-right: 2px solid #d7d7d7;
+				margin: 0 4px 7px 0;
+			}
+			.jtb-footer-menu__item:last-child {
+				border-right: 0;
+				margin-right: 0;
+			}
+			.jtb-footer-menu__link {
+				display: block;
+				font-size: 1.1rem;
+				font-weight: bold;
+				color: #3a6ab2;
+				line-height: 1;
+				text-align: center;
+				text-decoration: underline;
+			}
+			.jtb-footer-menu__link:hover { text-decoration: none; }
+			.jtb-footer-menu__link--ext {
+				position: relative;
+				padding-right: 18px;
+				background: url(../../../images/ovsfit/1.0/ico-blank-pc.png) right center no-repeat;
+				background-size: 13px 10px;
+			}
+
+	.jtb-footer-copyright {
+		display: block;
+		font-size: 1.1rem;
+		font-weight: bold;
+		color: #666;
+		text-align: right;
+	}
+
+/* ==========================================================
+ module
+========================================================== */
+/* jtb-banner-slide
+---------------------------------------------------------- */
+.jtb-bottom-area {
+	background-color: #fff;
+	}
+/* jtb-banner-slide
+---------------------------------------------------------- */
+.jtb-banner-slide {
+	padding-top: 45px;
+	margin-bottom: 60px;
+}
+	.jtb-banner-slide__in {
+		position: relative;
+		padding: 0 6.8%;
+	}
+			.jtb-banner-slide__link { display: block; }
+				.jtb-banner-slide__img { width: 100%; }
+		.jtb-banner-slide__control {
+			position: absolute;
+			top: 50%;
+			overflow: hidden;
+			width: 18px;
+			height: 35px;
+			margin-top: -18px;
+			text-indent: -9999px;
+			cursor: pointer;
+		}
+			.jtb-banner-slide__control--prev {
+				background: url(../../../images/ovsfit/1.0/btn-prev-pc.svg) 0 0 no-repeat;
+				background-size: 18px 35px;
+				left: 0;
+			}
+			.jtb-banner-slide__control--next {
+				background: url(../../../images/ovsfit/1.0/btn-next-pc.svg) 0 0 no-repeat;
+				background-size: 18px 35px;
+				right: 0;
+			}
+
+/* jtb-news-area
+---------------------------------------------------------- */
+.jtb-news-area { margin-bottom: 40px; }
+	.jtb-news-area__ttl {
+		position: relative;
+		padding-bottom: 6px;
+		border-bottom: 2px solid #d5d5d5;
+		margin-bottom: 15px;
+		font-size: 1.4rem;
+		font-weight: bold;
+		line-height: 1.4;
+		color: #000;
+	}
+		.jtb-news-area__ttl:before {
+			position: absolute;
+			bottom: 1px;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: #d5d5d5;
+			content: "";
+		}
+	.jtb-news-area__lnk-list { margin-bottom: 10px; }
+		.jtb-news-area__lnk-item {
+			display:inline-block;
+			padding-right: 20px;
+			border-right: 1px solid #000;
+			margin-right: 16px;
+			line-height: 1.5;
+		}
+		.jtb-news-area__lnk-item:last-child {
+			padding-right: 0;
+			border-right: 0;
+			margin-right: 0;
+		}
+			.jtb-news-area__lnk-link {
+				font-size: 1.3rem;
+				font-weight: bold;
+				color: #195178;
+				line-height: 1.7;
+			}
+	.jtb-list-news { overflow: hidden; }
+		.jtb-list-news__date {
+			float: left;
+			width: 100px;
+			font-family: arial;
+			font-size: 1.3rem;
+			color: #333;
+			line-height: 1.8;
+		}
+		.jtb-list-news__txt { padding-left: 100px; }
+			.jtb-list-news__link {
+				font-size: 1.3rem;
+				color: #195178;
+				line-height: 1.8;
+			}
+/* ==========================================================
+rwd class
+========================================================== */
+.jtb-rwd-header {
+	position: relative;
+	width: 100%;
+	height: 62px;
+	padding: 7px 15px;
+	background-color: #fff;
+	border-top: 4px solid #d2091d;
+	border-bottom: 1px solid #d7d7d7;
+}
+	.jtb-rwd-header__in {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+	}
+	.jtb-rwd-header-top__logo { width: 180px; }
+		.jtb-rwd-header-top__logo-link { display: block; }
+	.jtb-rwd-header-top__select-box {
+		position: relative;
+		width: 75px;
+		margin-top: 17px;
+	}
+		.jtb-rwd-header-top__select-input {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			border: none;
+			font-size: 1.6rem;
+			line-height: 1;
+			text-align: left;
+			-webkit-appearance: none;
+		}
+		.jtb-rwd-header-top__select-text {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background: url(../../../images/ovsfit/1.0/ico-pulldown-sp.png) right center no-repeat;
+			background-size: 10px 7px;
+			font-size: 1.0rem;
+			text-align: left;
+			line-height: 1;
+		}
+		.jtb-header-top__select-text--type-01 {
+			font-weight: bold;
+			color: #cf3847;
+		}
+	.jtb-rwd-header__utility {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		width:110px;
+		padding-top: 5px;
+	}
+
+	.jtb-rwd-header-top__select-box--sp { display: none; }
+	.jtb-rwd-header__utility--sp { display: none; }
+
+.jtb-pagetop-button { display: none; }
+
+.jtb-rwd-footer {
+	width: 100%;
+	background-color: #fff;
+	padding: 9px 16px;
+}
+
+.jtb-rwd-footer--extension{
+	padding-bottom: 91px;
+}
+	.jtb-rwd-footer__site-version {
+		margin-bottom: 15px;
+		text-align: center;
+		font-size: 1.3rem;
+		line-height: 1;
+	}
+		.jtb-rwd-footer__site-version-label { display: inline-block; }
+		.jtb-rwd-footer__site-version-link {
+			display: inline-block;
+			color: #3a6ab2;
+			font-weight: bold;
+		}
+		.jtb-rwd-footer__site-version-link--sp {
+			margin-right: 10px;
+			padding-right: 10px;
+			border-right: 2px solid #d7d7d7;
+		}
+		.jtb-rwd-footer__site-version-link.fit--active { color: #333; }
+	.jtb-rwd-footer-menu {
+		margin-bottom: 10px;
+		padding-left: 25px;
+		line-height: 1.5;
+	}
+		.jtb-rwd-footer-menu__item {
+			display: inline-block;
+			padding-right: 7px;
+			border-right: 2px solid #d7d7d7;
+			margin: 0 4px 4px 0;
+		}
+		.jtb-rwd-footer-menu__item:last-child {
+			border-right: 0;
+			margin-right: 0;
+		}
+		.jtb-rwd-footer-menu__link {
+			display: block;
+			font-size: 1rem;
+			font-weight: bold;
+			color: #3a6ab2;
+			line-height: 1;
+			text-align: center;
+		}
+		.jtb-rwd-footer-menu__link--ext {
+			position: relative;
+			padding-right: 18px;
+			background: url(../../../images/ovsfit/1.0/ico-blank-pc.png) right center no-repeat;
+		}
+
+.jtb-rwd-footer-copyright {
+	display: block;
+	font-size: 1.0rem;
+	font-weight: bold;
+	color: #666;
+	text-align: center;
+}
+
+.jtb-rwd-footer-in__sp { display: none; }
