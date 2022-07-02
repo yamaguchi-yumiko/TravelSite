@@ -142,7 +142,25 @@ return [
     | 言語行です。これはメッセージをよりきれいに表示するために役に立ちます。
     |
     */
-
-    'attributes' => [],
-
+    'attributes' => [
+        'check_time' => 'チェックイン',
+        'postal_code_first' => '郵便番号',
+        'postal_code_second' => '郵便番号',
+        'address_prefectures' => '住所',
+        'address_cities.required' => '住所',
+        'address_town' => '住所',
+        'tel_first' => '電話番号',
+        'tel_second' => '電話番号',
+        'tel_third' => '電話番号',
+        'emergency_contact_first' => '電話番号',
+        'emergency_contact_second' => '電話番号',
+        'emergency_contact_third' => '電話番号',
+        'next_email' => 'メールアドレス',
+        'email_conf' => '確認用メールアドレス',
+        'first_name.*' => '代表者氏名（漢字）',
+        'last_name.*' => '代表者氏名（漢字）',
+        'first_name.*.regex' => '代表者氏名（漢字）',
+        'last_name.*.regex' => '代表者氏名（漢字）',
+        'kiyaku' => '「個人情報の取り扱いに同意します」',
+    ],
 ];

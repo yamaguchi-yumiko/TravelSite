@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ReserveController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\PostController;
 
@@ -23,6 +25,18 @@ Route::get('/index.html', [PostController::class, 'index']);
 Route::get('/kokunai_hotel', [PostController::class, 'kokunai_hotel']);
 
 Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//予約登録ページ表示
+Route::get('/reserves/edit', [ReserveController::class, 'show'])->name('reserve.show');
+Route::post('/reserves/edit', [ReserveController::class, 'post'])->name('reserve.post');
+//予約確認画面表示
+Route::get('/reserves/confirm', [ReserveController::class, 'confirm'])->name('reserve.confirm');
+//メール送信
+Route::post('/reserves/confirm', [ReserveController::class, 'send'])->name('reserve.send');
+//予約完了画面表示
+Route::get('/reserves/done', [ReserveController::class, 'done'])->name('reserve.done');
 
 // メール認証用アドレス入力画面
 Route::get('/register/vertify', function () {
