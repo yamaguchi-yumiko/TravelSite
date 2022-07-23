@@ -1,0 +1,21 @@
+.admin_title {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+.form dl .admin_button {
+  text-align: center;
+  padding-top: 110px;
+}
+.form div dt {
+  float: left;
+  margin-top: 18px;
+  margin-right: 10px;
+}
+.form div dd {
+  float: right;
+  margin-top: 10px;
+}

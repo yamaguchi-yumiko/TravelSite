@@ -6,6 +6,7 @@
 <link rel="canonical" href="https://www.jtb.co.jp/">
 <link rel="alternate" media="only screen and (max-width: 640px)" href="https://www.jtb.co.jp/smartphone/">
 <title>JTB公式｜海外旅行・国内旅行｜ツアー・ホテル・旅館・宿の予約サイト</title>
+
 <!--Google オプティマイズフラッシング防止タグ START 2019/10/28追加-->
 <style>.async-hide { opacity: 0 !important} </style>
 <script type="text/javascript" src="https://www.jtb.co.jp/static/940a336914c30ee9ea8c3e6091045413ed760012acd3c8" async ></script><script>

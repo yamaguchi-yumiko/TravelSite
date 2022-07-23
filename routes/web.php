@@ -3,6 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\admin\AdminMainController;
+use App\Http\Controllers\admin\AdminLoginController;
+use App\Http\Controllers\admin\AdminLogoutController;
+use App\Http\Controllers\admin\AdminUserListController;
+use App\Http\Controllers\admin\UserListController;
+use App\Http\Controllers\admin\HotelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,4 +66,24 @@ Route::middleware('auth')->group(function () {
         return view('welcome');
     })
     ->name('myjtb');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// 管理画面
+Route::middleware(['checkIP'])->group(function () {
+    Route::group(['prefix' => 'admin'], function () {
+        Route::group(['middleware' => ['admin.auth']], function () {
+            Route::get('/', [AdminMainController::class, 'show']);
+            Route::post('/logout', [AdminLogoutController::class, 'logout']);
+            Route::get('/admin_user_list', [AdminUserListController::class, 'showUserList']);
+            Route::get('/user_list', [UserListController::class, 'showUserList']);
+            Route::get('/hotel_list', [HotelController::class, 'hotelList']);
+        });
+        Route::get('/login', [AdminLoginController::class, 'showForm']);
+        Route::post('/login', [AdminLoginController::class, 'login']);
+        Route::get('/admin_user_list', [AdminUserListController::class, 'showUserList']);
+    });
 });
