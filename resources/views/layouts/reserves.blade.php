@@ -52,8 +52,8 @@
 </body>
 <script>
     window.Laravel = {};
-    window.Laravel.total = <?= json_encode(isset($total) ? $total : '') ?>;
-    window.Laravel.point = <?= json_encode(isset($sessionUser['point_total']) ? $sessionUser['point_total'] : '') ?>;
+    window.Laravel.total = <?= json_encode(isset($hotel_total_price) ? $hotel_total_price : '') ?>;
+    window.Laravel.point = <?= json_encode(isset($user_point) ? $user_point : '') ?>;
     window.Laravel.poinUse = <?= json_encode(old('point_use')) ?>;
 
     window.Laravel.times = <?= json_encode(old('check_time')) ?>;
@@ -71,8 +71,8 @@
     window.Laravel.emergencyThird = <?= json_encode(old('emergency_contact_third')) ?>;
     window.Laravel.email = <?= json_encode(old('email')) ?>;
     window.Laravel.emailConf = <?= json_encode(old('email_conf')) ?>;
-    window.Laravel.firstName = <?= json_encode(old('first_name')) ?>;
-    window.Laravel.lastName = <?= json_encode(old('last_name')) ?>;
+    window.Laravel.firstName = <?= json_encode(old('room_first_name')) ?>;
+    window.Laravel.lastName = <?= json_encode(old('room_last_name')) ?>;
 
     window.Laravel.timeError = <?= json_encode($errors->has('check_time')) ?>;
     window.Laravel.postalFirstError = <?= json_encode($errors->has('postal_code_first')) ?>;
@@ -89,8 +89,8 @@
     window.Laravel.emailError = <?= json_encode($errors->has('email')) ?>;
 
 
-    window.Laravel.firstNameError = <?= json_encode($errors->has('first_name')) ?>;
-    window.Laravel.lastNameError = <?= json_encode($errors->has('last_name')) ?>;
+    window.Laravel.firstNameError = <?= json_encode($errors->has('room_first_name')) ?>;
+    window.Laravel.lastNameError = <?= json_encode($errors->has('room_last_name')) ?>;
 </script>
 
 </html>
