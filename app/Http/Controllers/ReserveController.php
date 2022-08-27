@@ -42,11 +42,9 @@ class ReserveController extends Controller
     ];
 
     /**
-     *   予約登録画面を表示
-     *
-     *@return object
-     *
-     **/
+    * 予約内容入力画面を表示
+    * @param Request $request
+    */
     public function show(Request $request)
     {
         $user = Auth::user();
@@ -109,11 +107,9 @@ class ReserveController extends Controller
     }
 
     /**
-     * 確認画面へ移動
-     *
-     * @param  object $request
-     * @return object
-     **/
+    * 予約内容入力の確認
+    * @param Request $request
+    */
     public function post(Request $request)
     {
         //入力のキーと値を取得
@@ -150,12 +146,9 @@ class ReserveController extends Controller
     }
 
     /**
-     * 確認処理
-     *
-     * @param  object $request
-     * @return object
-     **/
-
+    * 予約登録確認画面を表示
+    * @param Request $request
+    */
     public function confirm(Request $request)
     {
         $input = $request->session()->get('reserve_input');
@@ -172,13 +165,11 @@ class ReserveController extends Controller
                 'order_data'=> $order_data,
             ]);
     }
-    /**
-     * 送信処理~
-     *
-     * @param  object $request
-     * @return object
-     **/
 
+    /**
+    * メール送信
+    * @param Request $request
+    */
     public function send(Request $request)
     {
         // セッションから値を取り出す
@@ -196,11 +187,9 @@ class ReserveController extends Controller
     }
 
     /**
-     * 完了画面に移動
-     *
-     * @return object
-     **/
-
+    * 完了画面を表示
+    * @param Request $request
+    */
     public function done()
     {
         return view('reserves.done');
