@@ -152,6 +152,7 @@ class ReserveController extends Controller
     public function confirm(Request $request)
     {
         $input = $request->session()->get('reserve_input');
+        $input['transportation'] = config('const.transportation')['car'];
         $order_data = $request->session()->get('order_data');
 
         // セッションに値が無い時はフォームに戻る

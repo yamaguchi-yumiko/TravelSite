@@ -142,7 +142,7 @@
                         <tr>
                             <td>宿泊施設への交通手段</td>
                             <td>
-                                <p>{{$input['transportation'] == 'car' ? '車': '公共交通機関'}}</p>
+                                <p>{{$input['transportation']}}</p>
                             </td>
                         </tr>
                     </table>
