@@ -52,45 +52,44 @@
 </body>
 <script>
     window.Laravel = {};
-    window.Laravel.total = <?= json_encode(isset($total) ? $total : '') ?>;
-    window.Laravel.point = <?= json_encode(isset($sessionUser['point_total']) ? $sessionUser['point_total'] : '') ?>;
-    window.Laravel.poinUse = <?= json_encode(old('point_use')) ?>;
+    window.Laravel.total = <?=json_encode($hotel_total_price ?? '')?>;
+    window.Laravel.point = <?=json_encode($user_point ?? '')?>;
+    window.Laravel.poinUse = <?=json_encode(old('point_use'))?>;
 
-    window.Laravel.times = <?= json_encode(old('check_time')) ?>;
-    window.Laravel.emailOption = <?= json_encode(old('email_option')) ?>;
-    window.Laravel.postalFirst = <?= json_encode(old('postal_code_first')) ?>;
-    window.Laravel.postalSecond = <?= json_encode(old('postal_code_second')) ?>;
-    window.Laravel.addressPrefectures = <?= json_encode(old('address_prefectures')) ?>;
-    window.Laravel.addressCities = <?= json_encode(old('address_cities')) ?>;
-    window.Laravel.addressTown = <?= json_encode(old('address_town')) ?>;
-    window.Laravel.telFirst = <?= json_encode(old('tel_first')) ?>;
-    window.Laravel.telSecond = <?= json_encode(old('tel_second')) ?>;
-    window.Laravel.telThird = <?= json_encode(old('tel_third')) ?>;
-    window.Laravel.emergencyFirst = <?= json_encode(old('emergency_contact_first')) ?>;
-    window.Laravel.emergencySecond = <?= json_encode(old('emergency_contact_second')) ?>;
-    window.Laravel.emergencyThird = <?= json_encode(old('emergency_contact_third')) ?>;
-    window.Laravel.email = <?= json_encode(old('email')) ?>;
-    window.Laravel.emailConf = <?= json_encode(old('email_conf')) ?>;
-    window.Laravel.firstName = <?= json_encode(old('first_name')) ?>;
-    window.Laravel.lastName = <?= json_encode(old('last_name')) ?>;
+    window.Laravel.times = <?=json_encode(old('check_time'))?>;
+    window.Laravel.emailOption = <?=json_encode(old('email_option'))?>;
+    window.Laravel.postalFirst = <?=json_encode(old('postal_code_first'))?>;
+    window.Laravel.postalSecond = <?=json_encode(old('postal_code_second'))?>;
+    window.Laravel.addressPrefectures = <?=json_encode(old('address_prefectures'))?>;
+    window.Laravel.addressCities = <?=json_encode(old('address_cities'))?>;
+    window.Laravel.addressTown = <?=json_encode(old('address_town'))?>;
+    window.Laravel.telFirst = <?=json_encode(old('tel_first'))?>;
+    window.Laravel.telSecond = <?=json_encode(old('tel_second'))?>;
+    window.Laravel.telThird = <?=json_encode(old('tel_third'))?>;
+    window.Laravel.emergencyFirst = <?=json_encode(old('emergency_contact_first'))?>;
+    window.Laravel.emergencySecond = <?=json_encode(old('emergency_contact_second'))?>;
+    window.Laravel.emergencyThird = <?=json_encode(old('emergency_contact_third'))?>;
+    window.Laravel.email = <?=json_encode(old('email'))?>;
+    window.Laravel.emailConf = <?=json_encode(old('email_conf'))?>;
+    window.Laravel.firstName = <?=json_encode(old('room_first_name'))?>;
+    window.Laravel.lastName = <?=json_encode(old('room_last_name'))?>;
 
-    window.Laravel.timeError = <?= json_encode($errors->has('check_time')) ?>;
-    window.Laravel.postalFirstError = <?= json_encode($errors->has('postal_code_first')) ?>;
-    window.Laravel.postalSecondError = <?= json_encode($errors->has('postal_code_second')) ?>;
-    window.Laravel.addressPrefecturesError = <?= json_encode($errors->has('address_prefectures')) ?>;
-    window.Laravel.addressCitiesError = <?= json_encode($errors->has('address_cities')) ?>;
-    window.Laravel.addressTownError = <?= json_encode($errors->has('address_town')) ?>;
-    window.Laravel.telFirstError = <?= json_encode($errors->has('tel_first')) ?>;
-    window.Laravel.telSecondError = <?= json_encode($errors->has('tel_second')) ?>;
-    window.Laravel.telThirdError = <?= json_encode($errors->has('tel_third')) ?>;
-    window.Laravel.emergencyFirstError = <?= json_encode($errors->has('emergency_contact_first')) ?>;
-    window.Laravel.emergencySecondError = <?= json_encode($errors->has('emergency_contact_second')) ?>;
-    window.Laravel.emergencyThirdError = <?= json_encode($errors->has('emergency_contact_third')) ?>;
-    window.Laravel.emailError = <?= json_encode($errors->has('email')) ?>;
+    window.Laravel.timeError = <?=json_encode($errors->has('check_time'))?>;
+    window.Laravel.postalFirstError = <?=json_encode($errors->has('postal_code_first'))?>;
+    window.Laravel.postalSecondError = <?=json_encode($errors->has('postal_code_second'))?>;
+    window.Laravel.addressPrefecturesError = <?=json_encode($errors->has('address_prefectures'))?>;
+    window.Laravel.addressCitiesError = <?=json_encode($errors->has('address_cities'))?>;
+    window.Laravel.addressTownError = <?=json_encode($errors->has('address_town'))?>;
+    window.Laravel.telFirstError = <?=json_encode($errors->has('tel_first'))?>;
+    window.Laravel.telSecondError = <?=json_encode($errors->has('tel_second'))?>;
+    window.Laravel.telThirdError = <?=json_encode($errors->has('tel_third'))?>;
+    window.Laravel.emergencyFirstError = <?=json_encode($errors->has('emergency_contact_first'))?>;
+    window.Laravel.emergencySecondError = <?=json_encode($errors->has('emergency_contact_second'))?>;
+    window.Laravel.emergencyThirdError = <?=json_encode($errors->has('emergency_contact_third'))?>;
+    window.Laravel.emailError = <?=json_encode($errors->has('email'))?>;
 
-
-    window.Laravel.firstNameError = <?= json_encode($errors->has('first_name')) ?>;
-    window.Laravel.lastNameError = <?= json_encode($errors->has('last_name')) ?>;
+    window.Laravel.firstNameError = <?=json_encode($errors->has('room_first_name'))?>;
+    window.Laravel.lastNameError = <?=json_encode($errors->has('room_last_name'))?>;
 </script>
 
 </html>
